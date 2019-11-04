@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/SteamSparesOnline.iml" filepath="$PROJECT_DIR$/.idea/SteamSparesOnline.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../steam-spares-online/.idea/steam-spares-online.iml" filepath="$PROJECT_DIR$/../steam-spares-online/.idea/steam-spares-online.iml" />
     </modules>
   </component>
 </project>
