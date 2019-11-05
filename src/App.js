@@ -1,22 +1,19 @@
-import React from 'react';
+import React, {Component} from 'react';
 import logo from './logo.svg';
 import './App.css';
 import './components/game/index'
-import Game from "./components/game";
+import GameList from "./components/gameList";
+import api from "./datastore/stubAPI";
 
-function App() {
-  const game = {
-    cost: 20,
-    name: "Game1",
-    code: "google.com",
-    link: "google.com",
+class App extends Component{
+  render() {
+    let games = api.getAll();
+    return (
+        <div className="App">
+          <GameList games={games}/>
+        </div>
+    );
   }
-
-  return (
-    <div className="App">
-      <Game game={game}/>
-    </div>
-  );
 }
 
 export default App;

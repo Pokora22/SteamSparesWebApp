@@ -3,6 +3,13 @@ import _ from "lodash";
 class StubAPI {
     constructor() {
         this.games = [];
+        const game = {
+            cost: 20,
+            name: "Game1",
+            code: "google.com",
+            link: "google.com",
+        }
+        this.games.push(game, game, game, game, game);
     }
 
     find(id) {
