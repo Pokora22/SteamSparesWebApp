@@ -5,6 +5,8 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/game/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/game/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/gameList/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/gameList/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/newGameForm/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/newGameForm/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/datastore/stubAPI.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/datastore/stubAPI.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,6 +23,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="moving" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="JsFlowSettings">
@@ -70,7 +77,7 @@
       <updated>1572875766317</updated>
       <workItem from="1572875767481" duration="4830000" />
       <workItem from="1572950973139" duration="254000" />
-      <workItem from="1572951325976" duration="24231000" />
+      <workItem from="1572951325976" duration="26728000" />
     </task>
     <task id="LOCAL-00001" summary="Added single game card with basic styling">
       <created>1572967135793</created>
@@ -100,7 +107,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572975435281</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Fixed edit and save/cancel handling">
+      <created>1572977040346</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1572977040346</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -124,6 +138,7 @@
     <MESSAGE value="Added gamesList + some hardcoded games to test in the api" />
     <MESSAGE value="Added new game form&#10;Added add function to api" />
     <MESSAGE value="Added button handlers for edit, used change and delete&#10;Not fully functional yet - errors on saving/cancelling" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added button handlers for edit, used change and delete&#10;Not fully functional yet - errors on saving/cancelling" />
+    <MESSAGE value="Fixed edit and save/cancel handling" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed edit and save/cancel handling" />
   </component>
 </project>

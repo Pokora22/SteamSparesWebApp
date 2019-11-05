@@ -1,24 +1,25 @@
 import _ from "lodash";
+import * as uuid from "uuid";
 
 class StubAPI {
     constructor() {
-        this.games = [];
-        const game = {
-            cost: 20,
-            name: "Game1",
-            code: "google.com",
-            link: "http://www.google.com",
-        }
-        const game2 = {
-            cost: 320,
-            name: "Game2",
-            code: "google.com",
-            link: "http://www.google.com",
-        }
-        this.games.push(game, game, game, game2, game);
+        this.games = []
+        for(let i = 0; i < 10; i++)
+            this.addGame("Game1", "", "http://www.google.com", "No way", 0);
     }
 
-    add(game){
+    addGame(name, note, link, code, cost){
+        let game = {
+            id: uuid(),
+            cost: cost,
+            name: name,
+            code: code,
+            used: "Unused",
+            link: link,
+            date: new Date(),
+            note: note
+        }
+
         this.games.push(game);
     }
 

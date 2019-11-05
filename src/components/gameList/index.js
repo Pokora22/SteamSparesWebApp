@@ -4,7 +4,7 @@ import Game from "../game/index"
 export default class GameList extends Component {
     render() {
         const games = this.props.games.map(g => (
-            <Game game={g} deleteHandle={this.props.deleteHandler}/>
+            <Game game={g} deleteHandler={this.props.deleteHandler}/>
         ));
 
         return(

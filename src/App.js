@@ -8,17 +8,23 @@ import api from "./datastore/stubAPI";
 
 class App extends Component{
   deleteGame = (id) =>{
-    // api.delete(id)
+    api.delete(id)
     // this.setState({});
   }
+
+  addNewsItem = (name, note, link, code, cost) => {
+    api.addGame(name, note, link, code, cost);
+    // this.setState({});
+  };
 
 
   render() {
     let games = api.getAll();
+
     return (
       <div className="App">
         <div class="row container-fluid">
-          <Form />
+          <Form addHandler={this.addNewsItem()}/>
           <GameList games={games} deleteHandler={this.deleteGame()}/>
         </div>
       </div>

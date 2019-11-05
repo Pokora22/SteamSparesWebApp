@@ -74,8 +74,6 @@ export default class Game extends Component{
             <div className="col-12">
                 <div className={`card ${cardColor}`}>
                     <div className="card-body">
-
-
                             {this.state.status === "edit" ? (
                                 <Fragment>
                                     <h5 key="name" className="card-title">
@@ -101,6 +99,7 @@ export default class Game extends Component{
                                                 type="text"
                                                 className="form-control"
                                                 value={this.state.note}
+                                                placeholder="Note"
                                                 onChange={this.handleNoteChange}
                                             />
                                         </dt>
