@@ -7,7 +7,6 @@ export default class Game extends Component{
     constructor(props) {
         super(props);
         this.state = {
-            status: "",
             id: uuid(),
             cost: props.game.cost,
             name: props.game.name,
@@ -15,11 +14,15 @@ export default class Game extends Component{
             used: "Unused",
             link: props.game.link,
             date: new Date(),
-            note: ""
+            note: "",
         }
     }
 
-    handleEdit = () => this.setState({ status: "edit" });
+    handleEdit = () => {
+        this.setState({previousDetails: this.state})
+        this.setState({ status: "edit" });
+    }
+    handleDelete = () =>  this.setState({ status : 'del'} );
 
     handleSave = e => {
         e.preventDefault();
@@ -33,42 +36,38 @@ export default class Game extends Component{
         this.setState({ status: "", previousDetails: { id, name, code, link, type, note } });
         api.update(this.state.previousDetails.id, updatedName, updatedCode, this.state.previousDetails.link, updatedNote); //TODO: Add used/unused switching and link change (they're buttons...)
     };
-
     handleCancel = () => {
-        alert("?")
         let { name, code, note } = this.state.previousDetails;
         this.setState({ status: "", name, code, note });
+    };
+    handleConfirm = (e) => {
+        e.preventDefault();
+        this.props.deleteHandler(this.state.id);
     };
 
     handleNameChange = e => this.setState({ name: e.target.value });
     handleCostChange = e => this.setState({ cost: e.target.value });
     handleNoteChange = e => this.setState({ note: e.target.value });
     handleCodeChange = e => this.setState({ code: e.target.value });
-    handleDelete = () =>  this.setState({ status : 'del'} );
     handleUsedChange = () => this.setState({used: this.state.used === "Unused" ? "Used" : "Unused"})
-
-    handleConfirm = (e) => {
-        e.preventDefault();
-        this.props.deleteHandler(this.state.phone);
-    };
 
     render() {
         let activeButtons = buttons.normal;
-        let leftButtonHandler = this.handleEdit;
-        let rightButtonHandler = this.handleDelete;
+        let editButtonHandler = this.handleEdit;
+        let deleteButtonHandler = this.handleDelete;
         let usedButtonHandler = this.handleUsedChange;
         let cardColor = this.state.used === "Unused" ? "bg-light" : "bg-dark";
         if (this.state.status === "edit") {
             cardColor = "bg-primary";
             activeButtons = buttons.edit;
-            leftButtonHandler = this.handleSave;
-            rightButtonHandler = this.handleCancel;
+            editButtonHandler = this.handleSave;
+            deleteButtonHandler = this.handleCancel;
         }
         else if (this.state.status === 'del' ) {
             cardColor = "bg-warning";
             activeButtons = buttons.delete;
-            leftButtonHandler = this.handleCancel;
-            rightButtonHandler = this.handleConfirm;
+            editButtonHandler = this.handleCancel;
+            deleteButtonHandler = this.handleConfirm;
         }
 
         return (
@@ -136,7 +135,7 @@ export default class Game extends Component{
 
                     <div className="card-footer">
                         <div className="btn-group d-flex btn-group-justified" role="group" aria-label="...">
-                            <button type="button" className={"btn w-100 " + activeButtons.leftButtonColor} onClick={leftButtonHandler}>
+                            <button type="button" className={"btn w-100 " + activeButtons.leftButtonColor} onClick={editButtonHandler}>
                                 {activeButtons.leftButtonVal}
                             </button>
                             <button type="button" className={"btn btn-primary w-100"} onClick={usedButtonHandler}>
@@ -145,7 +144,7 @@ export default class Game extends Component{
                             <a href={this.state.link} target="_blank" class="btn w-100 btn-info" role="button">
                                 {"Visit store"}
                             </a>
-                            <button type="button" className={"btn w-100 " + activeButtons.rightButtonColor} onClick={rightButtonHandler}>
+                            <button type="button" className={"btn w-100 " + activeButtons.rightButtonColor} onClick={deleteButtonHandler}>
                                 {activeButtons.rightButtonVal}
                             </button>
                         </div>

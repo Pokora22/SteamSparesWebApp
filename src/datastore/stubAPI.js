@@ -9,7 +9,13 @@ class StubAPI {
             code: "google.com",
             link: "http://www.google.com",
         }
-        this.games.push(game, game, game, game, game);
+        const game2 = {
+            cost: 320,
+            name: "Game2",
+            code: "google.com",
+            link: "http://www.google.com",
+        }
+        this.games.push(game, game, game, game2, game);
     }
 
     add(game){
