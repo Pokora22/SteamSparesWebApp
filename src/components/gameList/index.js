@@ -5,7 +5,7 @@ export default class GameList extends Component {
 
     render() {
         const games = this.props.games.map(g => (
-            <Game game={g} deleteHandler={this.props.deleteHandler}/>
+            <Game key={g.id} game={g} deleteHandler={this.props.deleteHandler}/>
         ));
 
         return(

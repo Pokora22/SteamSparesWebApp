@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a53f3d0a-5f89-4c13-985f-cd903fd548ba" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/components/newGameForm/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/newGameForm/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/game/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/game/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/gameList/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/gameList/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/datastore/stubAPI.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/datastore/stubAPI.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -83,7 +87,7 @@
       <updated>1572875766317</updated>
       <workItem from="1572875767481" duration="4830000" />
       <workItem from="1572950973139" duration="254000" />
-      <workItem from="1572951325976" duration="27887000" />
+      <workItem from="1572951325976" duration="28739000" />
     </task>
     <task id="LOCAL-00001" summary="Added single game card with basic styling">
       <created>1572967135793</created>
@@ -134,7 +138,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572980316040</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Added missing state change handlers in the new game form">
+      <created>1572980617497</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1572980617497</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -161,6 +172,7 @@
     <MESSAGE value="Fixed edit and save/cancel handling" />
     <MESSAGE value="Added new game handler and addGame function in api" />
     <MESSAGE value="Fixed delete cancel - delete confirm still broken" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed delete cancel - delete confirm still broken" />
+    <MESSAGE value="Added missing state change handlers in the new game form" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added missing state change handlers in the new game form" />
   </component>
 </project>

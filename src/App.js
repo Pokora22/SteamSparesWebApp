@@ -23,7 +23,7 @@ class App extends Component{
 
     return (
       <div className="App">
-        <div class="row container-fluid">
+        <div className="row container-fluid">
           <Form addHandler={this.addNewsItem}/>
           <GameList games={games} hello=" you" deleteHandler={this.deleteGame}/>
         </div>

@@ -7,15 +7,17 @@ export default class Game extends Component{
     constructor(props) {
         super(props);
         this.state = {
-            id: uuid(),
+            id: props.game.id,
             cost: props.game.cost,
             name: props.game.name,
             code: props.game.code,
-            used: "Unused",
+            used: props.game.used,
             link: props.game.link,
-            date: new Date(),
-            note: "",
+            date: props.game.date,
+            note: props.game.note,
         }
+
+        console.log(this.state)
     }
 
     handleEdit = () => {
@@ -143,7 +145,7 @@ export default class Game extends Component{
                             <button type="button" className={"btn btn-primary w-100"} onClick={usedButtonHandler}>
                                 {this.state.used}
                             </button>
-                            <a href={this.state.link} target="_blank" class="btn w-100 btn-info" role="button">
+                            <a href={this.state.link} target="_blank" className="btn w-100 btn-info" role="button">
                                 {"Visit store"}
                             </a>
                             <button type="button" className={"btn w-100 " + activeButtons.rightButtonColor} onClick={deleteButtonHandler}>

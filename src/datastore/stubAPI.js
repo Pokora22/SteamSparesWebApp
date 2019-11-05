@@ -4,7 +4,7 @@ import * as uuid from "uuid";
 class StubAPI {
     constructor() {
         this.games = []
-        for(let i = 0; i < 10; i++)
+        for(let i = 0; i < 4; i++)
             this.addGame("Game1", "", "http://www.google.com", "No way", 0);
     }
 
