@@ -7,9 +7,13 @@ class StubAPI {
             cost: 20,
             name: "Game1",
             code: "google.com",
-            link: "google.com",
+            link: "www.google.com",
         }
         this.games.push(game, game, game, game, game);
+    }
+
+    add(game){
+        this.games.push(game);
     }
 
     find(id) {

@@ -8,7 +8,7 @@ export default class GameList extends Component {
         ));
 
         return(
-            <div className="container-fluid contacts bg-info">
+            <div className="container-fluid contacts bg-info col-8">
                 <div className="row">{games}</div>
             </div>
         )
