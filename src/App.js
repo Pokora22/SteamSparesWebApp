@@ -9,12 +9,12 @@ import api from "./datastore/stubAPI";
 class App extends Component{
   deleteGame = (id) =>{
     api.delete(id)
-    // this.setState({});
+    this.setState({});
   }
 
   addNewsItem = (name, note, link, code, cost) => {
     api.addGame(name, note, link, code, cost);
-    // this.setState({});
+    this.setState({});
   };
 
 
@@ -24,8 +24,8 @@ class App extends Component{
     return (
       <div className="App">
         <div class="row container-fluid">
-          <Form addHandler={this.addNewsItem()}/>
-          <GameList games={games} deleteHandler={this.deleteGame()}/>
+          <Form addHandler={this.addNewsItem}/>
+          <GameList games={games} hello=" you" deleteHandler={this.deleteGame}/>
         </div>
       </div>
     );

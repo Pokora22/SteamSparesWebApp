@@ -22,7 +22,10 @@ export default class Game extends Component{
         this.setState({previousDetails: this.state})
         this.setState({ status: "edit" });
     }
-    handleDelete = () =>  this.setState({ status : 'del'} );
+    handleDelete = () => {
+        this.setState({previousDetails: this.state})
+        this.setState({status: 'del'});
+    }
 
     handleSave = e => {
         e.preventDefault();
