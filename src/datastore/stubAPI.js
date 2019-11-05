@@ -7,7 +7,7 @@ class StubAPI {
             cost: 20,
             name: "Game1",
             code: "google.com",
-            link: "www.google.com",
+            link: "http://www.google.com",
         }
         this.games.push(game, game, game, game, game);
     }
@@ -40,12 +40,14 @@ class StubAPI {
         return this.games;
     }
 
-    update(id, name, link, type) {
+    update(id, name, code, link, type, note) {
         let index = _.findIndex(this.games, game => game.id === id);
         if (index !== -1) {
             this.games[index].name = name;
+            this.games[index].code = code;
             this.games[index].link = link;
             this.games[index].type = type;
+            this.games[index].note = note;
             return true;
         }
         return false;

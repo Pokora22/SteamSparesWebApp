@@ -7,13 +7,19 @@ import Form from "./components/newGameForm"
 import api from "./datastore/stubAPI";
 
 class App extends Component{
+  // deleteGame = (id) =>{
+  //   api.delete(id)
+  //   // this.setState({});
+  // }
+  // deleteHandler={this.deleteGame()}
+
   render() {
     let games = api.getAll();
     return (
       <div className="App">
         <div class="row container-fluid">
           <Form />
-          <GameList games={games}/>
+          <GameList games={games} />
         </div>
       </div>
     );

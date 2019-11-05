@@ -2,11 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a53f3d0a-5f89-4c13-985f-cd903fd548ba" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/config/buttonsConfig.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/game/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/game/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/gameList/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/gameList/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/newGameForm/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/newGameForm/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/datastore/stubAPI.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/datastore/stubAPI.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -36,11 +38,14 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../twoApps" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\pokor\WebstormProjects\steam-spares-online\src" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\pokor\WebstormProjects\steam-spares-online\src\components" />
     </key>
@@ -69,7 +74,7 @@
       <updated>1572875766317</updated>
       <workItem from="1572875767481" duration="4830000" />
       <workItem from="1572950973139" duration="254000" />
-      <workItem from="1572951325976" duration="17487000" />
+      <workItem from="1572951325976" duration="22585000" />
     </task>
     <task id="LOCAL-00001" summary="Added single game card with basic styling">
       <created>1572967135793</created>
@@ -85,7 +90,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572967536060</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Added new game form&#10;Added add function to api">
+      <created>1572969801130</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1572969801130</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -107,6 +119,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added single game card with basic styling" />
     <MESSAGE value="Added gamesList + some hardcoded games to test in the api" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added gamesList + some hardcoded games to test in the api" />
+    <MESSAGE value="Added new game form&#10;Added add function to api" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added new game form&#10;Added add function to api" />
   </component>
 </project>
