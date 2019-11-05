@@ -9,6 +9,12 @@ export default class Form extends Component {
         cost: 0
     }
 
+    handleNameChange = (e) =>  this.setState({name: e.target.value});
+    handleNoteChange = (e) =>  this.setState({note: e.target.value});
+    handleLinkChange = (e) => this.setState({link: e.target.value});
+    handleCodeChange = (e) => this.setState({code: e.target.value});
+    handleCostChange = (e) => this.setState({cost: e.target.value});
+
     handleSubmit = (e) => {
         e.preventDefault();
         this.props.addHandler( this.state.name, this.state.note, this.state.link, this.state.code, this.state.cost)
@@ -23,31 +29,36 @@ export default class Form extends Component {
                     <div className="form-group">
                         <input type="text"
                                className="form-control"
-                               value={this.state.name}
+                               defaultValue={this.state.name}
+                               onChange={this.handleNameChange}
                                placeholder="Game Name"></input>
                     </div>
                     <div className="form-group">
                         <input type="text"
                                className="form-control"
-                               value={this.state.note}
+                               defaultValue={this.state.note}
+                               onChange={this.handleNoteChange}
                                placeholder="Note"></input>
                     </div>
                     <div className="form-group">
                         <input type="text"
                                className="form-control"
-                               value={this.state.link}
+                               defaultValue={this.state.link}
+                               onChange={this.handleLinkChange}
                                placeholder="Link"></input>
                     </div>
                     <div className="form-group">
                         <input type="text"
                                className="form-control"
-                               value={this.state.code}
+                               defaultValue={this.state.code}
+                               onChange={this.handleCodeChange}
                                placeholder="Game Code"></input>
                     </div>
                     <div className="form-group">
                         <input type="number"
                                className="form-control"
-                               value={this.state.cost}
+                               defaultValue={this.state.cost}
+                               onChange={this.handleCostChange}
                                placeholder="Cost"></input>
                     </div>
                     <button type="submit" className="btn btn-primary" onClick={this.handleSubmit}>Add</button>
