@@ -6,6 +6,8 @@ import request from "superagent";
 import api from "./dataStore/stubAPI"; // NEW
 
 class App extends Component {
+  state = { search: "", gender: "all" };
+
   componentDidMount() {
     request.get("https://randomuser.me/api/?results=50").end((error, res) => {
       if (res) {
@@ -17,13 +19,19 @@ class App extends Component {
       }
     });
   }
+
+  deleteContact = (key) => {
+    api.delete(key);
+    this.setState({});
+  };
+
   render() {
     let contacts = api.getAll();
     return (
         <div className="jumbotron">
           <Header noContacts={contacts.length} />
           <FilterControls />
-          <ContactList contacts={contacts} />
+          <ContactList contacts={contacts} deleteHandler={this.deleteContact} />
         </div>
     );
   }

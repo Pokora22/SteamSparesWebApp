@@ -5,14 +5,12 @@ import Header from "../src/components/header";
 import FilterControls from '../src/components/filterControls/'
 import Contact from "../src/components/contact";
 import ContactList from "../src/components/contactList";
+import { action } from '@storybook/addon-actions';
 
 storiesOf("Contact List App/Header", module).add("default", () => (
     <Header noContacts={10} />
 ));
 
-storiesOf("Contact List App/Header", module).add("default", () => (
-    <Header noContacts={10} />
-));
 
 storiesOf("Contact List App/Filter Controls", module).add("default", () => (
     <FilterControls />
@@ -26,7 +24,7 @@ const sample = {
     picture: {thumbnail: './profile.png'}
 }
 storiesOf("Contact List App/Contact", module).add("default", () => (
-    <Contact contact={sample}/>
+    <Contact contact={sample} deleteHandler={action('Delete confirmed') }/>
 ));
 
 storiesOf("Contact List App/Contact List", module).add("default", () => {
