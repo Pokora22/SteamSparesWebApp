@@ -25,7 +25,7 @@ class App extends Component{
       <div className="App">
         <div className="row container-fluid">
           <Form addHandler={this.addNewsItem}/>
-          <GameList games={games} hello=" you" deleteHandler={this.deleteGame}/>
+          <GameList games={games} deleteHandler={this.deleteGame}/>
         </div>
       </div>
     );
