@@ -27,35 +27,41 @@ export default class Form extends Component {
                 <form  className="container-fluid form bg-dark text-light col-4">
                     <h3>Add a new game</h3>
                     <div className="form-group">
+                        <label htmlFor="gameName" className="col-12 col-form-label">Name of the game?</label>
                         <input type="text"
+                               id="gameName"
                                className="form-control"
                                defaultValue={this.state.name}
                                onChange={this.handleNameChange}
                                placeholder="Game Name"></input>
-                    </div>
-                    <div className="form-group">
+
+                        <label htmlFor="notes" className="col-12 col-form-label">Any notes?</label>
                         <input type="text"
+                               id="notes"
                                className="form-control"
                                defaultValue={this.state.note}
                                onChange={this.handleNoteChange}
                                placeholder="Note"></input>
-                    </div>
-                    <div className="form-group">
+
+                        <label htmlFor="link" className="col-12 col-form-label">Where can you view it?</label>
                         <input type="text"
+                               id="link"
                                className="form-control"
                                defaultValue={this.state.link}
                                onChange={this.handleLinkChange}
                                placeholder="Link"></input>
-                    </div>
-                    <div className="form-group">
+
+                        <label htmlFor="code" className="col-12 col-form-label">Your redeem code</label>
                         <input type="text"
+                               id="code"
                                className="form-control"
                                defaultValue={this.state.code}
                                onChange={this.handleCodeChange}
                                placeholder="Game Code"></input>
-                    </div>
-                    <div className="form-group">
+
+                        <label htmlFor="cost" className="col-12 col-form-label">What did it cost?</label>
                         <input type="number"
+                               id="cost"
                                className="form-control"
                                defaultValue={this.state.cost}
                                onChange={this.handleCostChange}

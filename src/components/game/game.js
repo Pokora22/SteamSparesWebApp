@@ -2,7 +2,6 @@ import React, { Component, Fragment } from "react";
 import buttons from "../../config/buttonsConfig";
 import validUrl from 'valid-url';
 import Popover from 'react-tiny-popover';
-import stubAPI from "../../datastore/stubAPI";
 
 export default class Game extends Component{
     constructor(props) {
