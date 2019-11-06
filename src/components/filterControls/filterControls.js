@@ -44,9 +44,10 @@ export default class FilterControls extends Component {
                             id="usedState"
                             onChange={this.handleTypeChange}
                         >
-                            <option value="all">All</option>
-                            <option value="unused">Unused Only</option>
-                            <option value="used">Used Only</option>
+                            {/*Compared to a 'used' boolean on the game object/*/}
+                            <option value="">All</option>
+                            <option value="false">Unused Only</option>
+                            <option value="true">Used Only</option>
                         </select>
                         <span> Sort By: </span>
                         <select

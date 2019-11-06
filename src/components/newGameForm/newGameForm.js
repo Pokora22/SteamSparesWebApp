@@ -24,7 +24,7 @@ export default class Form extends Component {
     render() {
         return (
 
-                <form  className="container-fluid form bg-dark text-light col-4">
+                <form  className="container-fluid form bg-dark text-light col-4 vh-100">
                     <h3>Add a new game</h3>
                     <div className="form-group">
                         <label htmlFor="gameName" className="col-12 col-form-label">Name of the game?</label>

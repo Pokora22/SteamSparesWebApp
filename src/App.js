@@ -9,7 +9,7 @@ import Header from "./components/header/header";
 import FilterControls from "./components/filterControls/filterControls";
 
 class App extends Component{
-  state = { search: "", used: "all", sorting: "", order: "" };
+  state = { search: "", used: "", sorting: "", order: "" };
 
   deleteGame = (id) =>{
     api.delete(id)
@@ -57,6 +57,7 @@ class App extends Component{
     let games = api.getAll();
     let usedCount = this.updateGameCounter(games);
     let filteredGames = api.getFiltered(this.state.search, games);
+    filteredGames = api.getFiltered(this.state.used, games);
     let sortedGames = api.getSorted(this.state.sorting, this.state.order, filteredGames);
 
     return (

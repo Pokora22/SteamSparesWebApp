@@ -9,7 +9,7 @@ export default class GameList extends Component {
         ));
 
         return(
-            <div className="container-fluid contacts bg-info col-8">
+            <div className="container-fluid contacts bg-info col-8 vh-100">
                 <div className="row">{games}</div>
             </div>
         )
