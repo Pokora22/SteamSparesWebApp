@@ -17,8 +17,8 @@ export default class Form extends Component {
 
     handleSubmit = (e) => {
         e.preventDefault();
-        this.props.addHandler( this.state.name, this.state.note, this.state.link, this.state.code, this.state.cost)
-        this.setState({ title: '', author:'', link: ''})
+        this.props.addHandler( this.state)
+        this.setState({ name: "", note:'', link: '', code: '', cost: 0})
     }
 
     render() {

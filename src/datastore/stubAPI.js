@@ -3,9 +3,14 @@ import * as uuid from "uuid";
 
 class StubAPI {
     constructor() {
-        this.games = []
+        this.games = [];
+        let game = {name: "Game1",
+            note: "",
+            link: "http://www.google.com",
+            code: "No way",
+            cost: 0}
         for(let i = 0; i < 4; i++)
-            this.addGame("Game1", "", "http://www.google.com", "No way", 0);
+            this.addGame(game);
     }
 
     addGame(gameData){

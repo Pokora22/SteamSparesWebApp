@@ -13,13 +13,13 @@ class App extends Component{
     this.setState({});
   }
 
-  addNewGame = (name, note, link, code, cost) => {
-    api.addGame(name, note, link, code, cost);
+  addNewGame = (gameData) => {
+    api.addGame(gameData);
     this.setState({});
   };
 
-  updateGame = (id, name, note, link, code, cost, used) => {
-    api.update(id, code, link, used, note, cost)
+  updateGame = (gameData) => {
+    api.update(gameData)
     this.setState({});
   }
 

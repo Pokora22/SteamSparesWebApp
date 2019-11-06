@@ -8,17 +8,16 @@ export default class Game extends Component{
         super(props);
         this.state = {
             id: props.game.id,
-            cost: props.game.cost,
             name: props.game.name,
             code: props.game.code,
-            used: props.game.used,
             link: props.game.link,
-            date: props.game.date,
+            used: props.game.used,
             note: props.game.note,
+            cost: props.game.cost,
+            date: props.game.date,
         }
-
-        console.log(this.state)
     }
+    //id, name, code, link, used, note, cost
 
     handleEdit = () => {
         this.setState({previousDetails: this.state})
@@ -33,13 +32,12 @@ export default class Game extends Component{
         e.preventDefault();
         let updatedName = this.state.name.trim();
         let updatedCode = this.state.code.trim();
-        let updatedNote = this.state.note.trim();
         if (!updatedName || !updatedCode) {
             return;
         }
-        let { id, name, code, link, type, note } = this.state;
-        this.setState({ status: "", previousDetails: { id, name, code, link, type, note } });
-        api.update(this.state.previousDetails.id, updatedName, updatedCode, this.state.previousDetails.link, updatedNote); //TODO: Add used/unused switching and link change (they're buttons...)
+        let { id, name, code, link, used, note, cost } = this.state;
+        this.setState({ status: "", previousDetails: { id, name, code, link, used, note, cost } });
+        this.props.updateHandler(this.state);
     };
     handleCancel = () => {
         let { name, code, note } = this.state.previousDetails;

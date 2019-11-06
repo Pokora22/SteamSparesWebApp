@@ -4,8 +4,8 @@
     <list default="true" id="a53f3d0a-5f89-4c13-985f-cd903fd548ba" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/gameList/gameList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/gameList/gameList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header/header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/game/game.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/game/game.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/newGameForm/newGameForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/newGameForm/newGameForm.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/datastore/stubAPI.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/datastore/stubAPI.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -155,7 +155,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573041124401</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Changed API to use packed arguments instead of list of arguments">
+      <created>1573043397607</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1573043397607</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -184,7 +191,8 @@
     <MESSAGE value="Fixed delete cancel - delete confirm still broken" />
     <MESSAGE value="Added missing state change handlers in the new game form" />
     <MESSAGE value="Added editing link for games" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added editing link for games" />
+    <MESSAGE value="Changed API to use packed arguments instead of list of arguments" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed API to use packed arguments instead of list of arguments" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
