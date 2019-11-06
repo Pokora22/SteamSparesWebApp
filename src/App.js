@@ -9,7 +9,7 @@ import Header from "./components/header/header";
 import FilterControls from "./components/filterControls/filterControls";
 
 class App extends Component{
-  state = { search: "", used: "all" };
+  state = { search: "", used: "all", sorting: "", order: "" };
 
   deleteGame = (id) =>{
     api.delete(id)
@@ -27,9 +27,20 @@ class App extends Component{
   }
 
   handleFiltering = (type, value) => {
-    type === "name"
-        ? this.setState({ search: value })
-        : this.setState({ used: value });
+    switch (type) {
+      case "name":
+        this.setState({search: value});
+        break;
+      case "usedState":
+        this.setState({used: value});
+        break;
+      case "sort":
+        this.setState({sorting: value});
+        break;
+      case "order":
+        this.setState({order: value});
+        break;
+    }
   };
 
   updateGameCounter = (games) =>{
@@ -45,16 +56,8 @@ class App extends Component{
   render() {
     let games = api.getAll();
     let usedCount = this.updateGameCounter(games);
-
-    let filteredGames = games.filter(g => {
-      const name = `${g.name}`;
-      return name.toLowerCase().search(this.state.search.toLowerCase()) !== -1;
-    });
-    filteredGames =
-        this.state.used === "all"
-            ? filteredGames
-            : filteredGames.filter(g => (g.used === false)); //TODO: Filter by 3 options: false, true, both ?
-    let sortedGames = _.sortBy(filteredGames, g => g.name);
+    let filteredGames = api.getFiltered(this.state.search);
+    let sortedGames = api.getSorted(filteredGames, this.state.sorting, this.state.order);
 
     return (
       <div className="App">

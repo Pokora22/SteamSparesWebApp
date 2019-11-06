@@ -12,6 +12,12 @@ export default class FilterControls extends Component {
     handleTypeChange = e => {
         this.handleChange(e, "usedState", e.target.value);
     };
+    handleSortChange = e => {
+        this.handleChange(e, "sort", e.target.value);
+    };
+    handleOrderChange = e => {
+        this.handleChange(e, "order", e.target.value);
+    };
 
     render() {
         return (
@@ -32,6 +38,22 @@ export default class FilterControls extends Component {
                             <option value="all">All</option>
                             <option value="unused">Unused Only</option>
                             <option value="used">Used Only</option>
+                        </select>
+                        <span> Sort By: </span>
+                        <select
+                            id="sort"
+                            onChange={this.handleSortChange}
+                        >
+                            <option value="name">Name</option>
+                            <option value="date">Date Added</option>
+                            <option value="cost">Cost</option>
+                        </select>
+                        <select
+                            id="order"
+                            onChange={this.handleOrderChange}
+                        >
+                            <option value="asc">Ascending</option>
+                            <option value="desc">Descending</option>
                         </select>
                     </h4>
                 </div>

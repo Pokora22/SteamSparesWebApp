@@ -53,6 +53,15 @@ class StubAPI {
         return this.games;
     }
 
+    getFiltered(search){
+        return this.games.filter(o =>
+            Object.keys(o).some(k => o[k].toString().toLowerCase().includes(search.toLowerCase())));
+    }
+
+    getSorted(arr = this.games, type, order = 'asc'){ //TODO: Might add actual ordering later
+        return _.orderBy(arr, [type], [order]);
+    }
+
     update(gameData) {
         let {id, name, code, link, used, note, cost} = gameData;
         let index = _.findIndex(this.games, game => game.id === id);
