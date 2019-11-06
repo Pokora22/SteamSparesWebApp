@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
 import logo from './logo.svg';
 import './App.css';
-import './components/game/index'
-import GameList from "./components/gameList";
-import Form from "./components/newGameForm"
+import './components/game/game'
+import GameList from "./components/gameList/gameList";
+import Form from "./components/newGameForm/newGameForm"
 import api from "./datastore/stubAPI";
 
 class App extends Component{
@@ -12,7 +12,7 @@ class App extends Component{
     this.setState({});
   }
 
-  addNewsItem = (name, note, link, code, cost) => {
+  addNewGame = (name, note, link, code, cost) => {
     api.addGame(name, note, link, code, cost);
     this.setState({});
   };
@@ -24,7 +24,7 @@ class App extends Component{
     return (
       <div className="App">
         <div className="row container-fluid">
-          <Form addHandler={this.addNewsItem}/>
+          <Form addHandler={this.addNewGame}/>
           <GameList games={games} deleteHandler={this.deleteGame}/>
         </div>
       </div>

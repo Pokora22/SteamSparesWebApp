@@ -55,6 +55,7 @@ export default class Game extends Component{
     handleNoteChange = e => this.setState({ note: e.target.value });
     handleCodeChange = e => this.setState({ code: e.target.value });
     handleUsedChange = () => this.setState({used: this.state.used === "Unused" ? "Used" : "Unused"})
+    handleLinkChange = e => this.setState({ link: e.target.value });
 
     render() {
         let activeButtons = buttons.normal;
@@ -116,6 +117,14 @@ export default class Game extends Component{
                                                 onChange={this.handleCodeChange}
                                             />
                                         </dt>
+                                        <dt>
+                                            <input
+                                                type="text"
+                                                className="form-control"
+                                                value={this.state.link}
+                                                onChange={this.handleLinkChange}
+                                            />
+                                        </dt>
                                     </dl>
                                 </Fragment>
                             ) : (
@@ -133,7 +142,6 @@ export default class Game extends Component{
                                     </dl>
                                 </Fragment>
                             )}
-
 
                     </div>
 

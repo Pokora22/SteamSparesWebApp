@@ -2,11 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a53f3d0a-5f89-4c13-985f-cd903fd548ba" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/header/header.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/game/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/game/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/gameList/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/gameList/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/datastore/stubAPI.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/datastore/stubAPI.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/filterControls/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/filterControls/filterControls.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/game/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/game/game.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/gameList/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/gameList/gameList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/newGameForm/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/newGameForm/newGameForm.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,6 +36,9 @@
     <exe-path />
     <other-services-enabled>true</other-services-enabled>
     <auto-save>true</auto-save>
+  </component>
+  <component name="PackageJsonUpdateNotifier">
+    <dismissed value="$PROJECT_DIR$/package.json" />
   </component>
   <component name="ProjectId" id="1T9cURgl9lFYRYIwzHOKs7oVFKE" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -66,12 +71,12 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration name="index.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/src/components/newGameForm/index.js" working-dir="$PROJECT_DIR$/src/components/newGameForm">
+    <configuration name="newGameForm.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/src/components/newGameForm/newGameForm.js" working-dir="$PROJECT_DIR$/src/components/newGameForm">
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Node.js.index.js" />
+        <item itemvalue="Node.js.newGameForm.js" />
       </list>
     </recent_temporary>
   </component>

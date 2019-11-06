@@ -1,5 +1,5 @@
 import React, {Component} from "react"
-import Game from "../game/index"
+import Game from "../game/game"
 
 export default class GameList extends Component {
 
