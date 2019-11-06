@@ -1,6 +1,12 @@
 import React, { Component } from "react";
+import arrow from './order.png';
+import './filterControls.css';
 
 export default class FilterControls extends Component {
+    state = {
+        order: "asc"
+    }
+
     handleChange = (e, type, value) => {
         e.preventDefault();
         this.props.filter(type, value);
@@ -16,7 +22,10 @@ export default class FilterControls extends Component {
         this.handleChange(e, "sort", e.target.value);
     };
     handleOrderChange = e => {
-        this.handleChange(e, "order", e.target.value);
+        let newOrder = this.state.order === "asc" ?
+            "desc" : "asc";
+        this.handleChange(e, "order", newOrder);
+        this.setState({order: newOrder});
     };
 
     render() {
@@ -48,13 +57,7 @@ export default class FilterControls extends Component {
                             <option value="date">Date Added</option>
                             <option value="cost">Cost</option>
                         </select>
-                        <select
-                            id="order"
-                            onChange={this.handleOrderChange}
-                        >
-                            <option value="asc">Ascending</option>
-                            <option value="desc">Descending</option>
-                        </select>
+                        <img src={arrow} className={this.state.order} alt="Order" onClick={this.handleOrderChange}/>
                     </h4>
                 </div>
             </nav>
