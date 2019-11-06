@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from "react";
-import * as uuid from "uuid";
 import buttons from "../../config/buttonsConfig";
-import api from "../../datastore/stubAPI";
+import validUrl from 'valid-url';
+import Popover from 'react-tiny-popover';
 
 export default class Game extends Component{
     constructor(props) {
@@ -15,6 +15,7 @@ export default class Game extends Component{
             note: props.game.note,
             cost: props.game.cost,
             date: props.game.date,
+            isPopoverOpen: false
         }
     }
     //id, name, code, link, used, note, cost
@@ -54,6 +55,15 @@ export default class Game extends Component{
     handleCodeChange = e => this.setState({ code: e.target.value });
     handleUsedChange = () => this.setState({used: this.state.used === "Unused" ? "Used" : "Unused"})
     handleLinkChange = e => this.setState({ link: e.target.value });
+
+    handleLinkButton = e =>{
+        let url = this.state.link;
+        if (validUrl.isUri(url)){
+            window.open(url)
+        } else {
+            this.setState({isPopoverOpen: true})
+        }
+    }
 
     render() {
         let activeButtons = buttons.normal;
@@ -151,9 +161,29 @@ export default class Game extends Component{
                             <button type="button" className={"btn btn-primary w-100"} onClick={usedButtonHandler}>
                                 {this.state.used}
                             </button>
-                            <a href={this.state.link} target="_blank" className="btn w-100 btn-info" role="button">
+
+                            <Popover
+                                isOpen={this.state.isPopoverOpen}
+                                position={['top', 'right', 'left']}
+                                padding={10}
+                                onClickOutside={() => this.setState({ isPopoverOpen: false })}
+                                content={() => (
+                                    <div
+                                        className={"badge bg-info"}
+                                        onClick={() => {
+                                            this.setState({ isPopoverOpen: false });
+                                    }}>
+                                        Sorry mate. This url is invalid.
+                                        <div>({this.state.link})</div>
+                                    </div>
+                                )}
+                            >
+
+                            <button type="button" className="btn w-100 btn-info" onClick={this.handleLinkButton}>
                                 {"Visit store"}
-                            </a>
+                            </button>
+                            </Popover>
+
                             <button type="button" className={"btn w-100 " + activeButtons.rightButtonColor} onClick={deleteButtonHandler}>
                                 {activeButtons.rightButtonVal}
                             </button>

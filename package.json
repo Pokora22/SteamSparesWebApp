@@ -8,8 +8,10 @@
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "react-scripts": "3.2.0",
+    "react-tiny-popover": "^3.4.5",
     "uid": "0.0.2",
-    "uuid": "^3.3.3"
+    "uuid": "^3.3.3",
+    "valid-url": "^1.0.9"
   },
   "scripts": {
     "start": "react-scripts start",

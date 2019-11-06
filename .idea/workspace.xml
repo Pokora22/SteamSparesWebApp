@@ -3,10 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="a53f3d0a-5f89-4c13-985f-cd903fd548ba" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/game/game.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/game/game.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/newGameForm/newGameForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/newGameForm/newGameForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/datastore/stubAPI.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/datastore/stubAPI.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -35,9 +34,6 @@
     <other-services-enabled>true</other-services-enabled>
     <auto-save>true</auto-save>
   </component>
-  <component name="PackageJsonUpdateNotifier">
-    <dismissed value="$PROJECT_DIR$/package.json" />
-  </component>
   <component name="ProjectId" id="1T9cURgl9lFYRYIwzHOKs7oVFKE" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
@@ -46,7 +42,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -69,12 +65,12 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration name="newGameForm.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/src/components/newGameForm/newGameForm.js" working-dir="$PROJECT_DIR$/src/components/newGameForm">
+    <configuration name="index.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/src/components/newGameForm/index.js" working-dir="$PROJECT_DIR$/src/components/newGameForm">
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Node.js.newGameForm.js" />
+        <item itemvalue="Node.js.index.js" />
       </list>
     </recent_temporary>
   </component>
@@ -91,6 +87,7 @@
       <workItem from="1572875767481" duration="4830000" />
       <workItem from="1572950973139" duration="254000" />
       <workItem from="1572951325976" duration="28739000" />
+      <workItem from="1573057991958" duration="4074000" />
     </task>
     <task id="LOCAL-00001" summary="Added single game card with basic styling">
       <created>1572967135793</created>
@@ -148,21 +145,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572980617497</updated>
     </task>
-    <task id="LOCAL-00009" summary="Added editing link for games">
-      <created>1573041124401</created>
+    <task id="LOCAL-00009" summary="Removed leftover unused props">
+      <created>1572981644037</created>
       <option name="number" value="00009" />
       <option name="presentableId" value="LOCAL-00009" />
       <option name="project" value="LOCAL" />
-      <updated>1573041124401</updated>
+      <updated>1572981644037</updated>
     </task>
-    <task id="LOCAL-00010" summary="Changed API to use packed arguments instead of list of arguments">
-      <created>1573043397607</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1573043397607</updated>
-    </task>
-    <option name="localTasksCounter" value="11" />
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -190,19 +180,7 @@
     <MESSAGE value="Added new game handler and addGame function in api" />
     <MESSAGE value="Fixed delete cancel - delete confirm still broken" />
     <MESSAGE value="Added missing state change handlers in the new game form" />
-    <MESSAGE value="Added editing link for games" />
-    <MESSAGE value="Changed API to use packed arguments instead of list of arguments" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed API to use packed arguments instead of list of arguments" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/datastore/stubAPI.js</url>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Removed leftover unused props" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed leftover unused props" />
   </component>
 </project>
