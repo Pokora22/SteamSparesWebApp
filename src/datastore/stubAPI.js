@@ -8,7 +8,8 @@ class StubAPI {
             this.addGame("Game1", "", "http://www.google.com", "No way", 0);
     }
 
-    addGame(name, note, link, code, cost){
+    addGame(gameData){
+        let {name, note, link, code, cost} = gameData;
         let game = {
             id: uuid(),
             cost: cost,
@@ -47,14 +48,16 @@ class StubAPI {
         return this.games;
     }
 
-    update(id, name, code, link, type, note) {
+    update(gameData) {
+        let {id, name, code, link, used, note, cost} = gameData
         let index = _.findIndex(this.games, game => game.id === id);
         if (index !== -1) {
             this.games[index].name = name;
             this.games[index].code = code;
             this.games[index].link = link;
-            this.games[index].type = type;
+            this.games[index].used = used;
             this.games[index].note = note;
+            this.games[index].cost = cost;
             return true;
         }
         return false;
