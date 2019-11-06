@@ -53,12 +53,12 @@ class StubAPI {
         return this.games;
     }
 
-    getFiltered(search){
+    getFiltered(search, arr = this.games){
         return this.games.filter(o =>
-            Object.keys(o).some(k => o[k].toString().toLowerCase().includes(search.toLowerCase())));
+            Object.keys(o).some(k => o[k].toString().toLowerCase().includes(search.toLowerCase()) && k != 'id'));
     }
 
-    getSorted(arr = this.games, type, order = 'asc'){ //TODO: Might add actual ordering later
+    getSorted(type, order = 'asc', arr = this.games){
         return _.orderBy(arr, [type], [order]);
     }
 

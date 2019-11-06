@@ -56,8 +56,8 @@ class App extends Component{
   render() {
     let games = api.getAll();
     let usedCount = this.updateGameCounter(games);
-    let filteredGames = api.getFiltered(this.state.search);
-    let sortedGames = api.getSorted(filteredGames, this.state.sorting, this.state.order);
+    let filteredGames = api.getFiltered(this.state.search, games);
+    let sortedGames = api.getSorted(this.state.sorting, this.state.order, filteredGames);
 
     return (
       <div className="App">
