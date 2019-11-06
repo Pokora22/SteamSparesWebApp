@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a53f3d0a-5f89-4c13-985f-cd903fd548ba" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/filterControls/filterControls.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/filterControls/filterControls.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/game/game.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/game/game.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/newGameForm/newGameForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/newGameForm/newGameForm.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -87,7 +90,7 @@
       <workItem from="1572875767481" duration="4830000" />
       <workItem from="1572950973139" duration="254000" />
       <workItem from="1572951325976" duration="28739000" />
-      <workItem from="1573057991958" duration="10052000" />
+      <workItem from="1573057991958" duration="13458000" />
     </task>
     <task id="LOCAL-00001" summary="Added single game card with basic styling">
       <created>1572967135793</created>
@@ -166,7 +169,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573067648810</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Added labels to new game form&#10;Removed unnecessary import">
+      <created>1573068077309</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1573068077309</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -197,6 +207,8 @@
     <MESSAGE value="Removed leftover unused props" />
     <MESSAGE value="Added url validation package&#10;Added popover with information in case url was invalid" />
     <MESSAGE value="Added counter of different types of game codes in the header" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added counter of different types of game codes in the header" />
+    <MESSAGE value="Added labels to new game form" />
+    <MESSAGE value="Added labels to new game form&#10;Removed unnecessary import" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added labels to new game form&#10;Removed unnecessary import" />
   </component>
 </project>

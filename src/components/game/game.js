@@ -2,6 +2,7 @@ import React, { Component, Fragment } from "react";
 import buttons from "../../config/buttonsConfig";
 import validUrl from 'valid-url';
 import Popover from 'react-tiny-popover';
+import * as copy from 'clipboard-copy';
 
 export default class Game extends Component{
     constructor(props) {
@@ -18,7 +19,6 @@ export default class Game extends Component{
             isPopoverOpen: false
         }
     }
-    //id, name, code, link, used, note, cost
 
     handleEdit = () => {
         this.setState({previousDetails: this.state})
@@ -149,7 +149,7 @@ export default class Game extends Component{
                                         <dt key = "date">Added: {this.state.date.toLocaleDateString()}</dt>
                                         <dt key = "note">{this.state.note}</dt>
                                         <dt key = "code">
-                                            <button type="button" className={"btn btn-success"}>
+                                            <button type="button" className={"btn btn-success"} onClick={() => copy(this.state.code)}>
                                                 {"Copy Code"}
                                             </button>
                                         </dt>
