@@ -20,7 +20,7 @@ class StubAPI {
             cost: cost,
             name: name,
             code: code,
-            used: "Unused",
+            used: false,
             link: link,
             date: new Date(),
             note: note
@@ -54,7 +54,7 @@ class StubAPI {
     }
 
     update(gameData) {
-        let {id, name, code, link, used, note, cost} = gameData
+        let {id, name, code, link, used, note, cost} = gameData;
         let index = _.findIndex(this.games, game => game.id === id);
         if (index !== -1) {
             this.games[index].name = name;

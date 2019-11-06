@@ -1,17 +1,24 @@
 import React, { Component } from "react";
+import "./header.css"
 
 class Header extends Component {
     render() {
         return (
             <div className="container-fluid">
                 <div className="row">
-                    <div className="col-md-6 offset-4">
+                    <div className="col-md-12">
                         <div className="page-header">
                             <h1>
-                                SteamSpares
-                                <span className="badge badge-pill badge-success">{this.props.gamesUnused}</span>
-                                <span className="badge badge-pill badge-dark">{this.props.gamesUsed}</span>
-                                <span className="badge badge-pill badge-warning">{this.props.gamesTotal}</span>
+                                <span className={"header col-4"}>SteamSpares</span>
+                                <span className="counter badge badge-pill badge-success align-text-top">{this.props.gamesUnused}
+                                    <span className={"countertext"}>Unused</span>
+                                </span>
+                                <span className="counter badge badge-pill badge-dark align-text-top">{this.props.gamesUsed}
+                                    <span className={"countertext"}>Used</span>
+                                </span>
+                                <span className="counter badge badge-pill badge-warning align-text-top">{this.props.gamesTotal}
+                                    <span className={"countertext"}>Total</span>
+                                </span>
                             </h1>
                         </div>
                     </div>

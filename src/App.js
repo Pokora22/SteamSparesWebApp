@@ -23,19 +23,24 @@ class App extends Component{
     this.setState({});
   }
 
+  updateGameCounter = (games) =>{
+    let used = 0;
+    games.forEach(g=> {
+      if(g.used)
+        used++;
+    });
+
+    return used;
+  }
 
   render() {
     let games = api.getAll();
-    var used;
-    for(let game in games){
-      if(game.used === "Used")
-        used++;
-    }
+    let used = this.updateGameCounter(games);
 
     return (
       <div className="App">
         <div className="row container-fluid">
-          <Header gamesUnused={1} gamesUsed={0} gamesTotal={games.length}/>
+          <Header gamesUnused={games.length - used} gamesUsed={used} gamesTotal={games.length}/>
         </div>
         <div className="row container-fluid">
           <Form addHandler={this.addNewGame}/>

@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a53f3d0a-5f89-4c13-985f-cd903fd548ba" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/header/header.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/game/game.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/game/game.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/header/header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/datastore/stubAPI.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/datastore/stubAPI.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,6 +18,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -40,6 +42,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
@@ -87,7 +90,7 @@
       <workItem from="1572875767481" duration="4830000" />
       <workItem from="1572950973139" duration="254000" />
       <workItem from="1572951325976" duration="28739000" />
-      <workItem from="1573057991958" duration="4074000" />
+      <workItem from="1573057991958" duration="9624000" />
     </task>
     <task id="LOCAL-00001" summary="Added single game card with basic styling">
       <created>1572967135793</created>
@@ -152,7 +155,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572981644037</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Added url validation package&#10;Added popover with information in case url was invalid">
+      <created>1573062102152</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1573062102152</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -181,6 +191,7 @@
     <MESSAGE value="Fixed delete cancel - delete confirm still broken" />
     <MESSAGE value="Added missing state change handlers in the new game form" />
     <MESSAGE value="Removed leftover unused props" />
-    <option name="LAST_COMMIT_MESSAGE" value="Removed leftover unused props" />
+    <MESSAGE value="Added url validation package&#10;Added popover with information in case url was invalid" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added url validation package&#10;Added popover with information in case url was invalid" />
   </component>
 </project>

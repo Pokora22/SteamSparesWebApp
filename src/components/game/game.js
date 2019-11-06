@@ -2,6 +2,7 @@ import React, { Component, Fragment } from "react";
 import buttons from "../../config/buttonsConfig";
 import validUrl from 'valid-url';
 import Popover from 'react-tiny-popover';
+import stubAPI from "../../datastore/stubAPI";
 
 export default class Game extends Component{
     constructor(props) {
@@ -53,8 +54,13 @@ export default class Game extends Component{
     handleCostChange = e => this.setState({ cost: e.target.value });
     handleNoteChange = e => this.setState({ note: e.target.value });
     handleCodeChange = e => this.setState({ code: e.target.value });
-    handleUsedChange = () => this.setState({used: this.state.used === "Unused" ? "Used" : "Unused"})
     handleLinkChange = e => this.setState({ link: e.target.value });
+
+    handleUsedChange = () => {
+        let newState = this.state;
+        newState.used = !newState.used;
+        this.props.updateHandler(newState);
+    }
 
     handleLinkButton = e =>{
         let url = this.state.link;
@@ -70,7 +76,8 @@ export default class Game extends Component{
         let editButtonHandler = this.handleEdit;
         let deleteButtonHandler = this.handleDelete;
         let usedButtonHandler = this.handleUsedChange;
-        let cardColor = this.state.used === "Unused" ? "bg-light" : "bg-dark";
+        let cardColor = this.state.used? "bg-dark" : "bg-light";
+        let usedVal = this.state.used? "Used" : "Unused";
         if (this.state.status === "edit") {
             cardColor = "bg-primary";
             activeButtons = buttons.edit;
@@ -159,7 +166,7 @@ export default class Game extends Component{
                                 {activeButtons.leftButtonVal}
                             </button>
                             <button type="button" className={"btn btn-primary w-100"} onClick={usedButtonHandler}>
-                                {this.state.used}
+                                {usedVal}
                             </button>
 
                             <Popover
