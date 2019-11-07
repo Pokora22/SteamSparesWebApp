@@ -39,12 +39,12 @@ export default class FilterControls extends Component {
                             placeholder="Name Search"
                             onChange={this.handleTextChange}
                         />
-                        <span> Used?: </span>
+
                         <select
                             id="usedState"
                             onChange={this.handleTypeChange}
                         >
-                            {/*Compared to a 'used' boolean on the game object/*/}
+                            {/*Compared to a 'used' boolean turned into string on the game object/*/}
                             <option value="">All</option>
                             <option value="false">Unused Only</option>
                             <option value="true">Used Only</option>

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Link} from "react-router-dom";
 
 export default class Signup extends Component {
     state = {
@@ -36,7 +37,8 @@ export default class Signup extends Component {
                            onChange={this.handlePassChange}
                            placeholder="********"></input>
                 </div>
-                <button type="submit" className="btn btn-primary" onClick={this.handleSubmit}>Signup</button>
+                <Link to="/login"><button type="submit" className="btn btn-primary">Login</button></Link>
+                <button type="submit" className="btn btn-primary float-right" onClick={this.handleSubmit}>Sign Up</button>
             </form>
 
         );

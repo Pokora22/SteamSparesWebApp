@@ -1,14 +1,16 @@
 import React, { Component } from 'react';
-import * as firebase from "firebase";
-import * as firebaseui from 'firebaseui';
+import { Link } from 'react-router-dom';
 
-firebase.auth().onAuthStateChanged(user =>{
-    if(user)
-        this.props.changeLogged();
-})
-
-// Initialize the FirebaseUI Widget using Firebase.
-let ui = new firebaseui.auth.AuthUI(firebase.auth());
+// import * as firebase from "firebase";
+// import * as firebaseui from 'firebaseui';
+//
+// firebase.auth().onAuthStateChanged(user =>{
+//     if(user)
+//         this.props.changeLogged();
+// })
+//
+// // Initialize the FirebaseUI Widget using Firebase.
+// // let ui = new firebaseui.auth.AuthUI(firebase.auth());
 
 
 export default class Login extends Component {
@@ -50,6 +52,7 @@ export default class Login extends Component {
                            placeholder="********"></input>
                 </div>
                 <button type="submit" className="btn btn-primary" onClick={this.handleSubmit}>Login</button>
+                <Link to="/signup"><button type="submit" className="btn btn-primary float-right">Sign Up</button></Link>
             </form>
 
         );
