@@ -7,9 +7,14 @@ import Form from "./components/newGameForm/newGameForm"
 import api from "./datastore/stubAPI";
 import Header from "./components/header/header";
 import FilterControls from "./components/filterControls/filterControls";
+import Login from "./components/firebase/login";
 
 class App extends Component{
-  state = { search: "", used: "", sorting: "", order: "" };
+  state = {loggedIn: false, search: "", used: "", sorting: "", order: "" };
+
+  changeLoggedState = () =>{
+    this.setState({loggedIn: !this.state.loggedIn});
+  }
 
   deleteGame = (id) =>{
     api.delete(id)
@@ -61,18 +66,24 @@ class App extends Component{
     let sortedGames = api.getSorted(this.state.sorting, this.state.order, filteredGames);
 
     return (
-      <div className="App">
-        <div className="row container-fluid">
-          <Header gamesUnused={games.length - usedCount} gamesUsed={usedCount} gamesTotal={games.length}/>
-        </div>
-        <div className={"row container-fluid"}>
-          <FilterControls filter={this.handleFiltering}/>
-        </div>
-        <div className="row container-fluid">
-          <Form addHandler={this.addNewGame}/>
-          <GameList games={sortedGames} deleteHandler={this.deleteGame} updateHandler={this.updateGame}/>
-        </div>
-      </div>
+        this.state.loggedIn ? (
+            <div className="App">
+              <div className="row container-fluid">
+                <Header gamesUnused={games.length - usedCount} gamesUsed={usedCount} gamesTotal={games.length}/>
+              </div>
+              <div className={"row container-fluid"}>
+                <FilterControls filter={this.handleFiltering}/>
+              </div>
+              <div className="row container-fluid">
+                <Form addHandler={this.addNewGame}/>
+                <GameList games={sortedGames} deleteHandler={this.deleteGame} updateHandler={this.updateGame}/>
+              </div>
+            </div>
+        ) : (
+            <div className="App">
+            <Login changeLogged={this.changeLoggedState}/>
+            </div>
+        )
     );
   }
 }

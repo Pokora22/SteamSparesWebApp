@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a53f3d0a-5f89-4c13-985f-cd903fd548ba" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/firebase/login.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/firebase/signup.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/filterControls/filterControls.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/filterControls/filterControls.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/gameList/gameList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/gameList/gameList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/newGameForm/newGameForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/newGameForm/newGameForm.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,8 +17,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -40,7 +41,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/firebase" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
@@ -53,6 +54,7 @@
       <recent name="C:\Users\pokor\WebstormProjects\steam-spares-online\src\components" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\pokor\WebstormProjects\steam-spares-online\src\components\firebase" />
       <recent name="C:\Users\pokor\WebstormProjects\steam-spares-online\src\components" />
       <recent name="C:\Users\pokor\WebstormProjects\steam-spares-online\src" />
     </key>
@@ -92,7 +94,7 @@
       <workItem from="1572875767481" duration="4830000" />
       <workItem from="1572950973139" duration="254000" />
       <workItem from="1572951325976" duration="28739000" />
-      <workItem from="1573057991958" duration="19854000" />
+      <workItem from="1573057991958" duration="24145000" />
     </task>
     <task id="LOCAL-00001" summary="Added single game card with basic styling">
       <created>1572967135793</created>
@@ -206,7 +208,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573076779102</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Finished adding filtering by used/unused category">
+      <created>1573077879492</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1573077879492</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -243,6 +252,7 @@
     <MESSAGE value="Added filtering by all fields in one input&#10;Added sorting field (ascending/descending)" />
     <MESSAGE value="Changed sorting field to an image" />
     <MESSAGE value="Removed matching unique id in sorting" />
-    <option name="LAST_COMMIT_MESSAGE" value="Removed matching unique id in sorting" />
+    <MESSAGE value="Finished adding filtering by used/unused category" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finished adding filtering by used/unused category" />
   </component>
 </project>
