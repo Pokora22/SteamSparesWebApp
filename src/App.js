@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import _ from 'lodash';
 import './App.css';
 import './components/game/game'
 import GameList from "./components/gameList/gameList";
@@ -7,14 +6,9 @@ import Form from "./components/newGameForm/newGameForm"
 import api from "./datastore/stubAPI";
 import Header from "./components/header/header";
 import FilterControls from "./components/filterControls/filterControls";
-import Login from "./components/firebase/login";
 
 class App extends Component{
-  state = {loggedIn: false, search: "", used: "", sorting: "", order: "" };
-
-  changeLoggedState = () =>{
-    this.setState({loggedIn: !this.state.loggedIn});
-  }
+  state = { search: "", used: "", sorting: "", order: "" };
 
   deleteGame = (id) =>{
     api.delete(id)
@@ -66,24 +60,18 @@ class App extends Component{
     let sortedGames = api.getSorted(this.state.sorting, this.state.order, filteredGames);
 
     return (
-        this.state.loggedIn ? (
-            <div className="App">
-              <div className="row container-fluid">
-                <Header gamesUnused={games.length - usedCount} gamesUsed={usedCount} gamesTotal={games.length}/>
-              </div>
-              <div className={"row container-fluid"}>
-                <FilterControls filter={this.handleFiltering}/>
-              </div>
-              <div className="row container-fluid">
-                <Form addHandler={this.addNewGame}/>
-                <GameList games={sortedGames} deleteHandler={this.deleteGame} updateHandler={this.updateGame}/>
-              </div>
-            </div>
-        ) : (
-            <div className="App">
-            <Login changeLogged={this.changeLoggedState}/>
-            </div>
-        )
+      <div className="App">
+        <div className="row">
+          <Header gamesUnused={games.length - usedCount} gamesUsed={usedCount} gamesTotal={games.length}/>
+        </div>
+        <div className={"row"}>
+          <FilterControls filter={this.handleFiltering}/>
+        </div>
+        <div className="row">
+          <Form addHandler={this.addNewGame}/>
+          <GameList games={sortedGames} deleteHandler={this.deleteGame} updateHandler={this.updateGame}/>
+        </div>
+      </div>
     );
   }
 }

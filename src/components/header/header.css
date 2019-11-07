@@ -28,3 +28,8 @@
 .counter:hover .countertext {
     visibility: visible;
 }
+
+.deco-none {
+    color:#000000 !important;
+    text-decoration:none !important;
+}

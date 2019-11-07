@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from 'react-router-dom';
 import "./header.css"
 
 class Header extends Component {
@@ -9,7 +10,7 @@ class Header extends Component {
                     <div className="col-md-12">
                         <div className="page-header">
                             <h1>
-                                <span className={"header col-4"}>SteamSpares</span>
+                                <span className={"header col-4 "}><Link className="deco-none" to="/about">SteamSpares</Link></span>
                                 <span className="counter badge badge-pill badge-success align-text-top">{this.props.gamesUnused}
                                     <span className={"countertext"}>Unused</span>
                                 </span>
