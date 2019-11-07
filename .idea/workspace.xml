@@ -2,10 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a53f3d0a-5f89-4c13-985f-cd903fd548ba" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/about/about.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/filterControls/filterControls.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/filterControls/filterControls.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/gameList/gameList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/gameList/gameList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/newGameForm/newGameForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/newGameForm/newGameForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/header/header.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/header.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/header/header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/datastore/stubAPI.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/datastore/stubAPI.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,15 +20,15 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="moving" />
+        <entry key="$PROJECT_DIR$" value="firebaseExperiment" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -47,14 +51,14 @@
     <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\pokor\WebstormProjects\steam-spares-online\src\components" />
+      <recent name="C:\Users\pokor\WebstormProjects\steam-spares-online\src" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\pokor\WebstormProjects\steam-spares-online\src\components\filterControls" />
       <recent name="C:\Users\pokor\WebstormProjects\steam-spares-online\src\components\header" />
       <recent name="C:\Users\pokor\WebstormProjects\steam-spares-online\src\components" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\pokor\WebstormProjects\steam-spares-online\src\components" />
-      <recent name="C:\Users\pokor\WebstormProjects\steam-spares-online\src" />
     </key>
   </component>
   <component name="RunDashboard">

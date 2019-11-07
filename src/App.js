@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import _ from 'lodash';
 import './App.css';
 import './components/game/game'
 import GameList from "./components/gameList/gameList";
@@ -62,13 +61,13 @@ class App extends Component{
 
     return (
       <div className="App">
-        <div className="row container-fluid">
+        <div className="row">
           <Header gamesUnused={games.length - usedCount} gamesUsed={usedCount} gamesTotal={games.length}/>
         </div>
-        <div className={"row container-fluid"}>
+        <div className={"row"}>
           <FilterControls filter={this.handleFiltering}/>
         </div>
-        <div className="row container-fluid">
+        <div className="row">
           <Form addHandler={this.addNewGame}/>
           <GameList games={sortedGames} deleteHandler={this.deleteGame} updateHandler={this.updateGame}/>
         </div>

@@ -55,7 +55,7 @@ class StubAPI {
 
     getFiltered(search, arr = this.games){
         return this.games.filter(o =>
-            Object.keys(o).some(k => o[k].toString().toLowerCase().includes(search.toLowerCase()) && k != 'id'));
+            Object.keys(o).some(k => o[k].toString().toLowerCase().includes(search.toLowerCase()) && k !== 'id'));
     }
 
     getSorted(type, order = 'asc', arr = this.games){
