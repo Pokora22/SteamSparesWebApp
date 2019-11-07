@@ -36,7 +36,7 @@ export default class Login extends Component {
                 <h3>Log in to access the page</h3>
                 <div className="form-group">
                     <label htmlFor="username" className="col-12 col-form-label">E-Mail</label>
-                    <input type="text"
+                    <input type="email"
                            id="username"
                            className="form-control"
                            value={this.state.name}
@@ -46,6 +46,7 @@ export default class Login extends Component {
                     <label htmlFor="password" className="col-12 col-form-label">Password</label>
                     <input type="password"
                            id="password"
+                           pattern=".{6,}" title="Six or more characters"
                            className="form-control"
                            value={this.state.note}
                            onChange={this.handlePassChange}
