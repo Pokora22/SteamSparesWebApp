@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a53f3d0a-5f89-4c13-985f-cd903fd548ba" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/firebase/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/firebase/login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/firebase/signup.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/firebase/signup.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -95,7 +92,7 @@
       <workItem from="1572950973139" duration="254000" />
       <workItem from="1572951325976" duration="28739000" />
       <workItem from="1573057991958" duration="19854000" />
-      <workItem from="1573134057477" duration="5411000" />
+      <workItem from="1573134057477" duration="5672000" />
     </task>
     <task id="LOCAL-00001" summary="Added single game card with basic styling">
       <created>1572967135793</created>
@@ -230,7 +227,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573138920272</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Added redirect after signing up&#10;Added error output on signup page">
+      <created>1573139498522</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1573139498522</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -270,6 +274,7 @@
     <MESSAGE value="Added firebase config and context" />
     <MESSAGE value="Sign up form is now creating new users in the firebase app" />
     <MESSAGE value="Changed forms to use value instead of wrongly using defaultValue" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed forms to use value instead of wrongly using defaultValue" />
+    <MESSAGE value="Added redirect after signing up&#10;Added error output on signup page" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added redirect after signing up&#10;Added error output on signup page" />
   </component>
 </project>

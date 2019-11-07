@@ -17,7 +17,7 @@ class Router extends Component{
             <BrowserRouter>
                 <Switch>
                     <Route path="/about" component={About}/>
-                    <Route exact path="/login" component={Login}/>
+                    <Route exact path="/login" component={withFirebase(Login)}/>
                     <Route exact path="/signup" component={withFirebase(Signup)}/>
                     <Route exact path="/app" component={App}/>
                     <Redirect from="/" to="/login" />

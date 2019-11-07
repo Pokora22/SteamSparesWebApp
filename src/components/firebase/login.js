@@ -1,38 +1,38 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-
-// import * as firebase from "firebase";
-// import * as firebaseui from 'firebaseui';
-//
-// firebase.auth().onAuthStateChanged(user =>{
-//     if(user)
-//         this.props.changeLogged();
-// })
-//
-// // Initialize the FirebaseUI Widget using Firebase.
-// // let ui = new firebaseui.auth.AuthUI(firebase.auth());
-
+import {Link} from "react-router-dom";
 
 export default class Login extends Component {
-    state = {
-        name: "",
-        pass: "",
+    constructor(props) {
+        super(props);
+        this.state = {
+            mail: '',
+            pass: ''
+        };
     }
 
-    handleNameChange = (e) =>  this.setState({name: e.target.value});
+
+    handleNameChange = (e) =>  this.setState({mail: e.target.value});
     handlePassChange = (e) =>  this.setState({pass: e.target.value});
 
-    handleSubmit = (e) => {
-        e.preventDefault();
 
-        // firebase.auth().signInWithEmailAndPassword(email, pasword).
+    handleSubmit = (e) => {
+        this.props.firebase
+            .doSignInWithEmailAndPassword(this.state.mail, this.state.pass)
+            .then(() => {
+                this.setState({ mail:'', pass:'' });
+                this.props.history.push("/app");
+            })
+            .catch(error => {
+                this.setState({ error });
+                alert(error);
+            });
+        e.preventDefault();
     }
-    //TODO: Remove probably, react is different ?
 
     render() {
         return (
 
-            <form  className="container-fluid form bg-dark text-light col-4 vh-100">
+            <form onSubmit={this.handleSubmit} className="container-fluid form bg-dark text-light col-4 vh-100">
                 <h3>Log in to access the page</h3>
                 <div className="form-group">
                     <label htmlFor="username" className="col-12 col-form-label">E-Mail</label>
@@ -51,8 +51,8 @@ export default class Login extends Component {
                            onChange={this.handlePassChange}
                            placeholder="********"></input>
                 </div>
-                <button type="submit" className="btn btn-primary" onClick={this.handleSubmit}>Login</button>
-                <Link to="/signup"><button type="submit" className="btn btn-primary float-right">Sign Up</button></Link>
+                <button type="submit" className="btn btn-primary">Login</button>
+                <Link to="/signup"><button type="button" className="btn btn-primary float-right">Sign Up</button></Link>
             </form>
 
         );
