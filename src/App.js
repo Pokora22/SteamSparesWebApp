@@ -39,6 +39,8 @@ class App extends Component{
       case "order":
         this.setState({order: value});
         break;
+      default:
+        break;
     }
   };
 

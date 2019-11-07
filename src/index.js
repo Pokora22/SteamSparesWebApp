@@ -8,7 +8,7 @@ import Signup from "./components/firebase/signup";
 import * as serviceWorker from './serviceWorker';
 import '../node_modules/bootstrap/dist/css/bootstrap.css'
 import { BrowserRouter, Route, Redirect, Switch } from "react-router-dom";
-import Firebase, { FirebaseContext } from './components/firebase';
+import Firebase, { FirebaseContext, withFirebase } from './components/firebase';
 
 class Router extends Component{
 
@@ -18,7 +18,7 @@ class Router extends Component{
                 <Switch>
                     <Route path="/about" component={About}/>
                     <Route exact path="/login" component={Login}/>
-                    <Route exact path="/signup" component={Signup}/>
+                    <Route exact path="/signup" component={withFirebase(Signup)}/>
                     <Redirect from="/" to="/login" />
                     {/*TODO: If user not logged*/}
                     <Redirect from="*" to="/" />
