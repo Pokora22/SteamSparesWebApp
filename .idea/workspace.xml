@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a53f3d0a-5f89-4c13-985f-cd903fd548ba" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/buttons/signOutButton.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header/header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -94,7 +93,7 @@
       <workItem from="1572950973139" duration="254000" />
       <workItem from="1572951325976" duration="28739000" />
       <workItem from="1573057991958" duration="19854000" />
-      <workItem from="1573134057477" duration="6242000" />
+      <workItem from="1573134057477" duration="7001000" />
     </task>
     <task id="LOCAL-00001" summary="Added single game card with basic styling">
       <created>1572967135793</created>
@@ -250,7 +249,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573139926638</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Added sign out button to header">
+      <created>1573140463043</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1573140463043</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -293,6 +299,7 @@
     <MESSAGE value="Added redirect after signing up&#10;Added error output on signup page" />
     <MESSAGE value="Added login page through firebase" />
     <MESSAGE value="Added form checking patterns to login" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added form checking patterns to login" />
+    <MESSAGE value="Added sign out button to header" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added sign out button to header" />
   </component>
 </project>

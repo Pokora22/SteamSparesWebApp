@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {Component, Fragment} from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
@@ -11,19 +11,38 @@ import { BrowserRouter, Route, Redirect, Switch } from "react-router-dom";
 import Firebase, { FirebaseContext, withFirebase } from './components/firebase';
 
 class Router extends Component{
+    constructor(props) {
+        super(props);
+        this.state = {
+            authUser: null,
+        };
+    }
 
     render() {
         return(
             <BrowserRouter>
-                <Switch>
-                    <Route path="/about" component={About}/>
-                    <Route exact path="/login" component={withFirebase(Login)}/>
-                    <Route exact path="/signup" component={withFirebase(Signup)}/>
-                    <Route exact path="/app" component={App}/>
-                    <Redirect from="/" to="/login" />
-                    {/*TODO: If user not logged*/}
-                    <Redirect from="*" to="/" />
-                </Switch>
+                {
+                    this.state.authUser ?
+                        (
+                            <Fragment>
+                                <Switch>
+                                    <Route path="/about" component={About}/>
+                                    <Route exact path="/" component={App}/>
+                                    <Redirect from="*" to="/" />
+                                </Switch>
+                            </Fragment>
+                        )
+                            :
+                        (
+                            <Fragment>
+                                <Switch>
+                                    <Route exact path="/login" component={withFirebase(Login)}/>
+                                    <Route exact path="/signup" component={withFirebase(Signup)}/>
+                                    <Redirect from="*" to="/login" />
+                                </Switch>
+                            </Fragment>
+                        )
+                }
             </BrowserRouter>
         );
     }
