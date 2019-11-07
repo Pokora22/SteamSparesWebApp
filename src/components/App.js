@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
 import './App.css';
-import './components/game/game'
-import GameList from "./components/gameList/gameList";
-import Form from "./components/newGameForm/newGameForm"
-import api from "./datastore/stubAPI";
-import Header from "./components/header/header";
-import FilterControls from "./components/filterControls/filterControls";
+import './game/game'
+import GameList from "./gameList/gameList";
+import Form from "./newGameForm/newGameForm"
+import api from "../datastore/stubAPI";
+import Header from "./header/header";
+import FilterControls from "./filterControls/filterControls";
 
 class App extends Component{
   state = { search: "", used: "", sorting: "", order: "" };

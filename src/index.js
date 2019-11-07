@@ -1,52 +1,10 @@
 import React, {Component, Fragment} from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
-import About from './components/about/about'
-import Login from "./components/firebase/login";
-import Signup from "./components/firebase/signup";
 import * as serviceWorker from './serviceWorker';
 import '../node_modules/bootstrap/dist/css/bootstrap.css'
-import { BrowserRouter, Route, Redirect, Switch } from "react-router-dom";
 import Firebase, { FirebaseContext, withFirebase } from './components/firebase';
-
-class Router extends Component{
-    constructor(props) {
-        super(props);
-        this.state = {
-            authUser: null,
-        };
-    }
-
-    render() {
-        return(
-            <BrowserRouter>
-                {
-                    this.state.authUser ?
-                        (
-                            <Fragment>
-                                <Switch>
-                                    <Route path="/about" component={About}/>
-                                    <Route exact path="/" component={App}/>
-                                    <Redirect from="*" to="/" />
-                                </Switch>
-                            </Fragment>
-                        )
-                            :
-                        (
-                            <Fragment>
-                                <Switch>
-                                    <Route exact path="/login" component={withFirebase(Login)}/>
-                                    <Route exact path="/signup" component={withFirebase(Signup)}/>
-                                    <Redirect from="*" to="/login" />
-                                </Switch>
-                            </Fragment>
-                        )
-                }
-            </BrowserRouter>
-        );
-    }
-}
+import Router from "./components/router";
 
 
 ReactDOM.render(
