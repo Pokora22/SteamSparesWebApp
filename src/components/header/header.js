@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { Link } from 'react-router-dom';
 import "./header.css"
+import SignOutButton from "../buttons/signOutButton";
+
 
 class Header extends Component {
     render() {
@@ -19,6 +21,9 @@ class Header extends Component {
                                 </span>
                                 <span className="counter badge badge-pill badge-warning align-text-top">{this.props.gamesTotal}
                                     <span className={"countertext"}>Total</span>
+                                </span>
+                                <span>
+                                    <SignOutButton />
                                 </span>
                             </h1>
                         </div>
