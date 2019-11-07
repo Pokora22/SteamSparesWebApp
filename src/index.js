@@ -19,6 +19,7 @@ class Router extends Component{
                     <Route path="/about" component={About}/>
                     <Route exact path="/login" component={Login}/>
                     <Route exact path="/signup" component={withFirebase(Signup)}/>
+                    <Route exact path="/app" component={App}/>
                     <Redirect from="/" to="/login" />
                     {/*TODO: If user not logged*/}
                     <Redirect from="*" to="/" />

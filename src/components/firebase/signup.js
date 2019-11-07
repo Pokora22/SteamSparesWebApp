@@ -20,9 +20,11 @@ export default class Signup extends Component {
             .doCreateUserWithEmailAndPassword(this.state.mail, this.state.pass)
             .then(authUser => {
                 this.setState({ mail:'', pass: '' });
+                this.props.history.push("/app");
             })
             .catch(error => {
                 this.setState({ error });
+                alert(error);
             });
         e.preventDefault();
     }

@@ -39,7 +39,7 @@ export default class Login extends Component {
                     <input type="text"
                            id="username"
                            className="form-control"
-                           defaultValue={this.state.name}
+                           value={this.state.name}
                            onChange={this.handleNameChange}
                            placeholder="E-Mail"></input>
 
@@ -47,7 +47,7 @@ export default class Login extends Component {
                     <input type="password"
                            id="password"
                            className="form-control"
-                           defaultValue={this.state.note}
+                           value={this.state.note}
                            onChange={this.handlePassChange}
                            placeholder="********"></input>
                 </div>
