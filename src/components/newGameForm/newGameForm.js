@@ -31,7 +31,7 @@ export default class Form extends Component {
                         <input type="text"
                                id="gameName"
                                className="form-control"
-                               defaultValue={this.state.name}
+                               value={this.state.name}
                                onChange={this.handleNameChange}
                                placeholder="Game Name"></input>
 
@@ -39,7 +39,7 @@ export default class Form extends Component {
                         <input type="text"
                                id="notes"
                                className="form-control"
-                               defaultValue={this.state.note}
+                               value={this.state.note}
                                onChange={this.handleNoteChange}
                                placeholder="Note"></input>
 
@@ -47,7 +47,7 @@ export default class Form extends Component {
                         <input type="text"
                                id="link"
                                className="form-control"
-                               defaultValue={this.state.link}
+                               value={this.state.link}
                                onChange={this.handleLinkChange}
                                placeholder="Link"></input>
 
@@ -55,7 +55,7 @@ export default class Form extends Component {
                         <input type="text"
                                id="code"
                                className="form-control"
-                               defaultValue={this.state.code}
+                               value={this.state.code}
                                onChange={this.handleCodeChange}
                                placeholder="Game Code"></input>
 
@@ -63,7 +63,7 @@ export default class Form extends Component {
                         <input type="number"
                                id="cost"
                                className="form-control"
-                               defaultValue={this.state.cost}
+                               value={this.state.cost}
                                onChange={this.handleCostChange}
                                placeholder="Cost"></input>
                     </div>

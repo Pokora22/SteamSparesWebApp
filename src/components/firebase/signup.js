@@ -38,7 +38,7 @@ export default class Signup extends Component {
                         <input type="email"
                                id="username"
                                className="form-control"
-                               defaultValue={this.state.mail}
+                               value={this.state.mail}
                                onChange={this.handleNameChange}
                                placeholder="E-Mail"></input>
 
@@ -47,7 +47,7 @@ export default class Signup extends Component {
                                id="password"
                                pattern=".{6,}" title="Six or more characters"
                                className="form-control"
-                               defaultValue={this.state.pass}
+                               value={this.state.pass}
                                onChange={this.handlePassChange}
                                placeholder="********"></input>
                     </div>
