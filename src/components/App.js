@@ -63,16 +63,10 @@ class App extends Component{
   }
 
   render() {
-    let usedCount = 0;
-    let sortedGames = [];
-
-    if(this.state.gameList.length > 0) {
-      console.log("??");
-      usedCount = this.updateGameCounter(this.state.gameList);
-      let filteredGames = api.getFiltered(this.state.search, this.state.gameList);
-      filteredGames = api.getFiltered(this.state.used, filteredGames);
-      sortedGames = api.getSorted(this.state.sorting, this.state.order, filteredGames);
-    }
+    let usedCount = this.updateGameCounter(this.state.gameList);
+    let filteredGames = api.getFiltered(this.state.search, this.state.gameList);
+    filteredGames = api.getFiltered(this.state.used, filteredGames);
+    let sortedGames = api.getSorted(this.state.sorting, this.state.order, filteredGames);
 
     return (
       <div className="App">
