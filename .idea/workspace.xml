@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a53f3d0a-5f89-4c13-985f-cd903fd548ba" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/firebase/firebase.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/firebase/firebase.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/datastore/stubAPI.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/datastore/stubAPI.js" afterDir="false" />
     </list>
@@ -285,7 +286,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573236680540</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Added game data writing to firebase db">
+      <created>1573238354287</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1573238354287</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -305,7 +313,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added button handlers for edit, used change and delete&#10;Not fully functional yet - errors on saving/cancelling" />
     <MESSAGE value="Fixed edit and save/cancel handling" />
     <MESSAGE value="Added new game handler and addGame function in api" />
     <MESSAGE value="Fixed delete cancel - delete confirm still broken" />
@@ -330,6 +337,7 @@
     <MESSAGE value="Fixed bug in api that was returning current array instead of the one supplied" />
     <MESSAGE value="Upgraded API to handle users and games&#10;Games are now property specific to users" />
     <MESSAGE value="Added firebasa database:&#10;- new user data created when user logs in for the first time" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added firebasa database:&#10;- new user data created when user logs in for the first time" />
+    <MESSAGE value="Added game data writing to firebase db" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added game data writing to firebase db" />
   </component>
 </project>

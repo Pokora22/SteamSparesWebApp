@@ -39,24 +39,18 @@ class StubAPI {
         games.push(game);
     }
 
-    findUser(id) {
-        let index = _.findIndex(
-            this.users,
-            user => `${user.uid}` === id
-        );
-        if (index !== -1) {
-            return this.users[index];
-        }
-        //Otherwise create a new user in db
-        let newUser = {
-            uid: id,
-            games: []
+    async findUser(id) {
+        let user = await this.firebase.findUserData(id);
+
+        if(!user) {
+            console.log('Creating new user in db');
+            user = {
+                uid: id
+            }
+            firebase.default.prototype.writeUserData(user);
         }
 
-        this.firebase.writeUserData(newUser);
-
-        this.users.push(newUser);
-        return newUser;
+        return user;
     }
 
     delete(id, arr) {
@@ -68,9 +62,23 @@ class StubAPI {
         this.games = games;
     }
 
-    getAllGames(uid) {
+    async getAllGames(uid) {
         this.userId = uid;
-        let games = this.findUser(this.userId).games;
+
+        let games = [];
+        await this.findUser(uid).then(value => {
+            if(value.games){
+                console.log('found games');
+                games = value.games;
+            }
+            else{
+                console.log('didnt find any games');
+                games = [];
+            }
+            // games = value.games ?
+            //     value.games : [];
+        });
+        console.log(games);
         return games;
     }
 

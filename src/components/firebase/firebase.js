@@ -35,10 +35,17 @@ export default class Firebase {
         this.auth.currentUser.updatePassword(password);
 
     writeUserData(user) {
-        firebase.database().ref('/' + user.uid).set(user.uid);
+        firebase.database().ref('/users/' + user.uid).set(user.uid);
     }
 
     writeUserGameData(userId, gameId, gameData){
-        firebase.database().ref('/' + userId + '/' + gameId).set(gameData);
+        firebase.database().ref('/users/' + userId + '/' + gameId).set(gameData);
+    }
+
+    async findUserData(userId){
+        const snapshot = await firebase.database().ref('/users/' + userId).once('value');
+        let user = (snapshot.val());
+
+        return user;
     }
 }

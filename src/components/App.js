@@ -8,7 +8,7 @@ import Header from "./header/header";
 import FilterControls from "./filterControls/filterControls";
 
 class App extends Component{
-  state = { search: "", used: "", sorting: "", order: "", gameList: api.getAllGames(this.props.firebase.auth.currentUser.uid) };
+  state = { search: "", used: "", sorting: "", order: "", gameList: [] };
 
   deleteGame = (id) =>{
     api.delete(id, this.state.gameList)
@@ -16,6 +16,7 @@ class App extends Component{
   }
 
   addNewGame = (gameData) => {
+    console.log('adding game ' + this.state.gameList.value)
     api.addGame(gameData, this.state.gameList);
     this.setState({});
   };
@@ -54,26 +55,30 @@ class App extends Component{
     return used;
   }
 
+  componentDidMount() {
+    api.getAllGames(this.props.firebase.auth.currentUser.uid).then(value => console.log(value));
+    // this.setState({ gameList: api.getAllGames(this.props.firebase.auth.currentUser.uid) });
+  }
+
   render() {
-    let usedCount = this.updateGameCounter(this.state.gameList);
-    let filteredGames = api.getFiltered(this.state.search, this.state.gameList);
-    filteredGames = api.getFiltered(this.state.used, filteredGames);
-    let sortedGames = api.getSorted(this.state.sorting, this.state.order, filteredGames);
+    // let usedCount = this.updateGameCounter(this.state.gameList);
+    // let filteredGames = api.getFiltered(this.state.search, this.state.gameList);
+    // filteredGames = api.getFiltered(this.state.used, filteredGames);
+    // let sortedGames = api.getSorted(this.state.sorting, this.state.order, filteredGames);
 
     console.log();
-
     return (
       <div className="App">
-        <div className="row">
-          <Header gamesUnused={this.state.gameList.length - usedCount} gamesUsed={usedCount} gamesTotal={this.state.gameList.length}/>
-        </div>
-        <div className={"row"}>
-          <FilterControls filter={this.handleFiltering}/>
-        </div>
-        <div className="row">
-          <Form addHandler={this.addNewGame}/>
-          <GameList games={sortedGames} deleteHandler={this.deleteGame} updateHandler={this.updateGame}/>
-        </div>
+        {/*<div className="row">*/}
+        {/*  <Header gamesUnused={this.state.gameList.length - usedCount} gamesUsed={usedCount} gamesTotal={this.state.gameList.length}/>*/}
+        {/*</div>*/}
+        {/*<div className={"row"}>*/}
+        {/*  <FilterControls filter={this.handleFiltering}/>*/}
+        {/*</div>*/}
+        {/*<div className="row">*/}
+        {/*  <Form addHandler={this.addNewGame}/>*/}
+        {/*  <GameList games={sortedGames} deleteHandler={this.deleteGame} updateHandler={this.updateGame}/>*/}
+        {/*</div>*/}
       </div>
     );
   }
