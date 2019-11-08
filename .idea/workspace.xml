@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a53f3d0a-5f89-4c13-985f-cd903fd548ba" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.firebaserc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/firebase.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/router.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/session/withAuthentication.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/session/withAuthentication.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/datastore/stubAPI.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/datastore/stubAPI.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -269,7 +264,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573141083427</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Fixed bug in api that was returning current array instead of the one supplied">
+      <created>1573230213965</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1573230213965</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -289,7 +291,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added single game card with basic styling" />
     <MESSAGE value="Added gamesList + some hardcoded games to test in the api" />
     <MESSAGE value="Added new game form&#10;Added add function to api" />
     <MESSAGE value="Added button handlers for edit, used change and delete&#10;Not fully functional yet - errors on saving/cancelling" />
@@ -314,6 +315,7 @@
     <MESSAGE value="Added form checking patterns to login" />
     <MESSAGE value="Added sign out button to header" />
     <MESSAGE value="Split router into two parts: authorized and unauthorized" />
-    <option name="LAST_COMMIT_MESSAGE" value="Split router into two parts: authorized and unauthorized" />
+    <MESSAGE value="Fixed bug in api that was returning current array instead of the one supplied" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed bug in api that was returning current array instead of the one supplied" />
   </component>
 </project>

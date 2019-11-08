@@ -8,20 +8,20 @@ import Header from "./header/header";
 import FilterControls from "./filterControls/filterControls";
 
 class App extends Component{
-  state = { search: "", used: "", sorting: "", order: "" };
+  state = { search: "", used: "", sorting: "", order: "", gameList: api.getAllGames(this.props.firebase.auth.currentUser.uid) };
 
   deleteGame = (id) =>{
-    api.delete(id)
+    api.delete(id, this.state.gameList)
     this.setState({});
   }
 
   addNewGame = (gameData) => {
-    api.addGame(gameData);
+    api.addGame(gameData, this.state.gameList);
     this.setState({});
   };
 
   updateGame = (gameData) => {
-    api.update(gameData)
+    api.update(gameData, this.state.gameList)
     this.setState({});
   }
 
@@ -55,16 +55,19 @@ class App extends Component{
   }
 
   render() {
-    let games = api.getAll();
-    let usedCount = this.updateGameCounter(games);
-    let filteredGames = api.getFiltered(this.state.search, games);
+    // let games = api.getAllGames(this.props.firebase.auth.currentUser.uid);
+    // let usedCount = 0;
+    let usedCount = this.updateGameCounter(this.state.gameList);
+    let filteredGames = api.getFiltered(this.state.search, this.state.gameList);
     filteredGames = api.getFiltered(this.state.used, filteredGames);
     let sortedGames = api.getSorted(this.state.sorting, this.state.order, filteredGames);
+
+    console.log();
 
     return (
       <div className="App">
         <div className="row">
-          <Header gamesUnused={games.length - usedCount} gamesUsed={usedCount} gamesTotal={games.length}/>
+          <Header gamesUnused={this.state.gameList.length - usedCount} gamesUsed={usedCount} gamesTotal={this.state.gameList.length}/>
         </div>
         <div className={"row"}>
           <FilterControls filter={this.handleFiltering}/>
