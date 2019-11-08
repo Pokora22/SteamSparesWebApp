@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a53f3d0a-5f89-4c13-985f-cd903fd548ba" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/firebase/firebase.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/firebase/firebase.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/game/game.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/game/game.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/datastore/stubAPI.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/datastore/stubAPI.js" afterDir="false" />
     </list>
@@ -301,7 +299,21 @@
       <option name="project" value="LOCAL" />
       <updated>1573251591001</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Added JSON parsing to retrieve games from Firebase db&#10;Changed date temporarily to a string, need to revert for JSON">
+      <created>1573256112911</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1573256112911</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Small fix in render condition">
+      <created>1573256164604</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1573256164604</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -321,8 +333,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added new game handler and addGame function in api" />
-    <MESSAGE value="Fixed delete cancel - delete confirm still broken" />
     <MESSAGE value="Added missing state change handlers in the new game form" />
     <MESSAGE value="Removed leftover unused props" />
     <MESSAGE value="Added url validation package&#10;Added popover with information in case url was invalid" />
@@ -346,6 +356,8 @@
     <MESSAGE value="Added firebasa database:&#10;- new user data created when user logs in for the first time" />
     <MESSAGE value="Added game data writing to firebase db" />
     <MESSAGE value="Getting users is working now with async methods" />
-    <option name="LAST_COMMIT_MESSAGE" value="Getting users is working now with async methods" />
+    <MESSAGE value="Added JSON parsing to retrieve games from Firebase db&#10;Changed date temporarily to a string, need to revert for JSON" />
+    <MESSAGE value="Small fix in render condition" />
+    <option name="LAST_COMMIT_MESSAGE" value="Small fix in render condition" />
   </component>
 </project>

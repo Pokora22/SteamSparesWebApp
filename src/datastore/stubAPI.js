@@ -32,8 +32,7 @@ class StubAPI {
             code: code,
             used: false,
             link: link,
-            // date: new Date(),
-            date: "someday",
+            date: (new Date()).toLocaleDateString(),
             note: note
         }
 

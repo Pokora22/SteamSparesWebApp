@@ -96,26 +96,32 @@ export default class Game extends Component{
                     <div className="card-body">
                             {this.state.status === "edit" ? (
                                 <Fragment>
-                                    <h5 key="name" className="card-title">
-                                        <input
-                                            type="text"
-                                            className="form-control"
-                                            value={this.state.name}
-                                            onChange={this.handleNameChange}
-                                        />
-                                    </h5>
                                     <dl>
+                                        <dt key = "date">Added: {this.state.date}</dt>
                                         <dt>
+                                            <label htmlFor="name" className="col-12 col-form-label">Name</label>
                                             <input
+                                                id="name"
+                                                type="text"
+                                                className="form-control"
+                                                value={this.state.name}
+                                                onChange={this.handleNameChange}
+                                            />
+                                        </dt>
+                                        <dt>
+                                            <label htmlFor="cost" className="col-12 col-form-label">Cost</label>
+                                            <input
+                                                id="cost"
                                                 type="text"
                                                 className="form-control"
                                                 value={this.state.cost}
                                                 onChange={this.handleCostChange}
                                             />
                                         </dt>
-                                        <dt key = "date">Added: {this.state.date.toLocaleDateString()}</dt>
                                         <dt>
+                                            <label htmlFor="date" className="col-12 col-form-label">Notes</label>
                                             <input
+                                                id="date"
                                                 type="text"
                                                 className="form-control"
                                                 value={this.state.note}
@@ -124,7 +130,9 @@ export default class Game extends Component{
                                             />
                                         </dt>
                                         <dt>
+                                            <label htmlFor="code" className="col-12 col-form-label">Code</label>
                                             <input
+                                                id="code"
                                                 type="text"
                                                 className="form-control"
                                                 value={this.state.code}
@@ -132,7 +140,9 @@ export default class Game extends Component{
                                             />
                                         </dt>
                                         <dt>
+                                            <label htmlFor="link" className="col-12 col-form-label">Link</label>
                                             <input
+                                                id="link"
                                                 type="text"
                                                 className="form-control"
                                                 value={this.state.link}
@@ -146,7 +156,7 @@ export default class Game extends Component{
                                     <h5 key="name" className="card-title">{this.state.name}</h5>
                                     <dl>
                                         <dt key = "cost">{this.state.cost}$</dt>
-                                        {/*<dt key = "date">Added: {this.state.date.toLocaleDateString()}</dt>*/}
+                                        <dt key = "date">Added: {this.state.date}</dt>
                                         <dt key = "note">{this.state.note}</dt>
                                         <dt key = "code">
                                             <button type="button" className={"btn btn-success"} onClick={() => copy(this.state.code)}>
