@@ -42,6 +42,10 @@ export default class Firebase {
         firebase.database().ref('/users/' + userId + '/games/' + gameId).set(gameData);
     }
 
+    removeGameData(userId, gameId){
+        firebase.database().ref('/users/' + userId + '/games/' + gameId).remove();
+    }
+
     async findUserData(userId){
         const snapshot = await firebase.database().ref('/users/' + userId).once('value');
         let user = (snapshot.val());

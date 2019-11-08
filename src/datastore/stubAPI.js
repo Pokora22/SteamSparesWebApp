@@ -6,21 +6,6 @@ class StubAPI {
     constructor() {
         this.firebase = firebase.default.prototype;
         this.userId = '';
-        //
-        // this.users = [{
-        //     uid: 'uFB9HBVULUQQs9cq8cRdYuCJBf83',
-        //     games: []
-        // }];
-        //
-        // let game = {name: "Game1",
-        //     note: "",
-        //     link: "http://www.google.com",
-        //     code: "No way",
-        //     cost: 0}
-        // for(let i = 0; i < 4; i++)
-        //     this.addGame(game, this.users[0].games);
-        //
-        // console.log(this.users[0]);
     }
 
     addGame(gameData, games){
@@ -36,12 +21,8 @@ class StubAPI {
             note: note
         }
 
-        this.firebase.writeUserGameData(this.userId, game.id, game);
-
-        console.log('gamepush');
-        console.log(games);
-
-        games.push(game);
+        this.firebase.writeUserGameData(this.userId, game.id, game); //online update
+        games.push(game); //local update
     }
 
     async findUser(id) {
@@ -59,7 +40,8 @@ class StubAPI {
     }
 
     delete(id, arr) {
-        let elements = _.remove(arr, game => game.id === id);
+        firebase.default.prototype.removeGameData(this.userId, id); //online update
+        let elements = _.remove(arr, game => game.id === id); //local update
         return elements;
     }
 
@@ -101,6 +83,9 @@ class StubAPI {
             arr[index].used = used;
             arr[index].note = note;
             arr[index].cost = cost;
+
+            firebase.default.prototype.writeUserGameData(this.userId, id, gameData);
+
             return true;
         }
         return false;

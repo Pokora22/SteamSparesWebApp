@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a53f3d0a-5f89-4c13-985f-cd903fd548ba" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/game/game.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/game/game.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/firebase/firebase.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/firebase/firebase.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/datastore/stubAPI.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/datastore/stubAPI.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -313,7 +312,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573256164604</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Added labels to card when in editing mode">
+      <created>1573256757431</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1573256757431</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -333,7 +339,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added missing state change handlers in the new game form" />
     <MESSAGE value="Removed leftover unused props" />
     <MESSAGE value="Added url validation package&#10;Added popover with information in case url was invalid" />
     <MESSAGE value="Added counter of different types of game codes in the header" />
@@ -358,6 +363,7 @@
     <MESSAGE value="Getting users is working now with async methods" />
     <MESSAGE value="Added JSON parsing to retrieve games from Firebase db&#10;Changed date temporarily to a string, need to revert for JSON" />
     <MESSAGE value="Small fix in render condition" />
-    <option name="LAST_COMMIT_MESSAGE" value="Small fix in render condition" />
+    <MESSAGE value="Added labels to card when in editing mode" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added labels to card when in editing mode" />
   </component>
 </project>
