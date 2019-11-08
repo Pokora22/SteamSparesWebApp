@@ -6,12 +6,12 @@ class StubAPI {
     constructor() {
         this.firebase = firebase.default.prototype;
         this.userId = '';
-
-        this.users = [{
-            uid: 'uFB9HBVULUQQs9cq8cRdYuCJBf83',
-            games: []
-        }];
-
+        //
+        // this.users = [{
+        //     uid: 'uFB9HBVULUQQs9cq8cRdYuCJBf83',
+        //     games: []
+        // }];
+        //
         // let game = {name: "Game1",
         //     note: "",
         //     link: "http://www.google.com",
@@ -19,6 +19,8 @@ class StubAPI {
         //     cost: 0}
         // for(let i = 0; i < 4; i++)
         //     this.addGame(game, this.users[0].games);
+        //
+        // console.log(this.users[0]);
     }
 
     addGame(gameData, games){
@@ -30,11 +32,15 @@ class StubAPI {
             code: code,
             used: false,
             link: link,
-            date: new Date(),
+            // date: new Date(),
+            date: "someday",
             note: note
         }
 
         this.firebase.writeUserGameData(this.userId, game.id, game);
+
+        console.log('gamepush');
+        console.log(games);
 
         games.push(game);
     }
@@ -49,7 +55,7 @@ class StubAPI {
             }
             firebase.default.prototype.writeUserData(user);
         }
-
+        console.log(user);
         return user;
     }
 
@@ -68,17 +74,12 @@ class StubAPI {
         let games = [];
         await this.findUser(uid).then(value => {
             if(value.games){
-                console.log('found games');
-                games = value.games;
+                var keys = Object.keys(value.games);
+                keys.forEach(function(key){
+                    games.push(value.games[key]);
+                });
             }
-            else{
-                console.log('didnt find any games');
-                games = [];
-            }
-            // games = value.games ?
-            //     value.games : [];
         });
-        console.log(games);
         return games;
     }
 

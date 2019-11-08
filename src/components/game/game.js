@@ -146,7 +146,7 @@ export default class Game extends Component{
                                     <h5 key="name" className="card-title">{this.state.name}</h5>
                                     <dl>
                                         <dt key = "cost">{this.state.cost}$</dt>
-                                        <dt key = "date">Added: {this.state.date.toLocaleDateString()}</dt>
+                                        {/*<dt key = "date">Added: {this.state.date.toLocaleDateString()}</dt>*/}
                                         <dt key = "note">{this.state.note}</dt>
                                         <dt key = "code">
                                             <button type="button" className={"btn btn-success"} onClick={() => copy(this.state.code)}>

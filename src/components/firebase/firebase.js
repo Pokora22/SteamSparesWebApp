@@ -39,7 +39,7 @@ export default class Firebase {
     }
 
     writeUserGameData(userId, gameId, gameData){
-        firebase.database().ref('/users/' + userId + '/' + gameId).set(gameData);
+        firebase.database().ref('/users/' + userId + '/games/' + gameId).set(gameData);
     }
 
     async findUserData(userId){

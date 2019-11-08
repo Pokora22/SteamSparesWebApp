@@ -5,6 +5,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/firebase/firebase.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/firebase/firebase.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/game/game.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/game/game.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/datastore/stubAPI.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/datastore/stubAPI.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -293,7 +294,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573238354287</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Getting users is working now with async methods">
+      <created>1573251591001</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1573251591001</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -313,7 +321,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Fixed edit and save/cancel handling" />
     <MESSAGE value="Added new game handler and addGame function in api" />
     <MESSAGE value="Fixed delete cancel - delete confirm still broken" />
     <MESSAGE value="Added missing state change handlers in the new game form" />
@@ -338,6 +345,7 @@
     <MESSAGE value="Upgraded API to handle users and games&#10;Games are now property specific to users" />
     <MESSAGE value="Added firebasa database:&#10;- new user data created when user logs in for the first time" />
     <MESSAGE value="Added game data writing to firebase db" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added game data writing to firebase db" />
+    <MESSAGE value="Getting users is working now with async methods" />
+    <option name="LAST_COMMIT_MESSAGE" value="Getting users is working now with async methods" />
   </component>
 </project>
