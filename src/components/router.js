@@ -11,9 +11,6 @@ import { AuthUserContext } from './session';
 class Router extends Component{
 
     render() {
-        console.log("Router props");
-        console.log(this.props);
-
         return(
             <BrowserRouter>
                 <AuthUserContext.Consumer>
@@ -23,7 +20,7 @@ class Router extends Component{
                             <Fragment>
                                 <Switch>
                                     <Route path="/about" component={About}/>
-                                    <Route exact path="/" component={App}/>
+                                    <Route exact path="/" component={withFirebase(App)}/>
                                     <Redirect from="*" to="/" />
                                 </Switch>
                             </Fragment>
