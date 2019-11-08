@@ -1,4 +1,7 @@
-import app from 'firebase';
+import * as firebase from 'firebase/app';
+
+import 'firebase/auth';
+import 'firebase/database';
 
 const config = {
     apiKey: process.env.REACT_APP_API_KEY,
@@ -12,9 +15,9 @@ const config = {
 
 export default class Firebase {
     constructor() {
-        app.initializeApp(config);
+        firebase.initializeApp(config);
 
-        this.auth = app.auth();
+        this.auth = firebase.auth();
     }
 
     // *** Auth API ***
@@ -30,4 +33,21 @@ export default class Firebase {
 
     doPasswordUpdate = password =>
         this.auth.currentUser.updatePassword(password);
+
+    writeUserData(user) {
+        console.log(user);
+        console.log(user.uid);
+        console.log(user.games);
+        firebase.database().ref('/' + user.uid).set({
+            somekey: 'somevalue',
+            games: user.games
+        });
+    }
+
+    writeUserGameData(userId, gameId, gameData){
+        let update = {};
+        update['/' + userId + '/games/' + gameId] = gameData;
+
+        return this.database.ref().update(update);
+    }
 }

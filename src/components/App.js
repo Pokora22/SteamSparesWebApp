@@ -55,8 +55,6 @@ class App extends Component{
   }
 
   render() {
-    // let games = api.getAllGames(this.props.firebase.auth.currentUser.uid);
-    // let usedCount = 0;
     let usedCount = this.updateGameCounter(this.state.gameList);
     let filteredGames = api.getFiltered(this.state.search, this.state.gameList);
     filteredGames = api.getFiltered(this.state.used, filteredGames);

@@ -1,8 +1,11 @@
 import _ from "lodash";
 import * as uuid from "uuid";
+import * as firebase from "../components/firebase/firebase";
 
 class StubAPI {
     constructor() {
+        this.db = firebase.default.prototype;
+
         this.users = [{
             uid: 'uFB9HBVULUQQs9cq8cRdYuCJBf83',
             games: []
@@ -46,6 +49,8 @@ class StubAPI {
             uid: id,
             games: []
         }
+
+        this.db.writeUserData(newUser);
         this.users.push(newUser);
         return newUser;
     }
