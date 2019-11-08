@@ -35,19 +35,10 @@ export default class Firebase {
         this.auth.currentUser.updatePassword(password);
 
     writeUserData(user) {
-        console.log(user);
-        console.log(user.uid);
-        console.log(user.games);
-        firebase.database().ref('/' + user.uid).set({
-            somekey: 'somevalue',
-            games: user.games
-        });
+        firebase.database().ref('/' + user.uid).set(user.uid);
     }
 
     writeUserGameData(userId, gameId, gameData){
-        let update = {};
-        update['/' + userId + '/games/' + gameId] = gameData;
-
-        return this.database.ref().update(update);
+        firebase.database().ref('/' + userId + '/' + gameId).set(gameData);
     }
 }

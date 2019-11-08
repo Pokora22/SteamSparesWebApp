@@ -4,20 +4,21 @@ import * as firebase from "../components/firebase/firebase";
 
 class StubAPI {
     constructor() {
-        this.db = firebase.default.prototype;
+        this.firebase = firebase.default.prototype;
+        this.userId = '';
 
         this.users = [{
             uid: 'uFB9HBVULUQQs9cq8cRdYuCJBf83',
             games: []
         }];
 
-        let game = {name: "Game1",
-            note: "",
-            link: "http://www.google.com",
-            code: "No way",
-            cost: 0}
-        for(let i = 0; i < 4; i++)
-            this.addGame(game, this.users[0].games);
+        // let game = {name: "Game1",
+        //     note: "",
+        //     link: "http://www.google.com",
+        //     code: "No way",
+        //     cost: 0}
+        // for(let i = 0; i < 4; i++)
+        //     this.addGame(game, this.users[0].games);
     }
 
     addGame(gameData, games){
@@ -32,6 +33,8 @@ class StubAPI {
             date: new Date(),
             note: note
         }
+
+        this.firebase.writeUserGameData(this.userId, game.id, game);
 
         games.push(game);
     }
@@ -50,7 +53,8 @@ class StubAPI {
             games: []
         }
 
-        this.db.writeUserData(newUser);
+        this.firebase.writeUserData(newUser);
+
         this.users.push(newUser);
         return newUser;
     }
@@ -65,7 +69,8 @@ class StubAPI {
     }
 
     getAllGames(uid) {
-        let games = this.findUser(uid).games;
+        this.userId = uid;
+        let games = this.findUser(this.userId).games;
         return games;
     }
 
