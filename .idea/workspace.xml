@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a53f3d0a-5f89-4c13-985f-cd903fd548ba" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.firebase/hosting.YnVpbGQ.cache" beforeDir="false" afterPath="$PROJECT_DIR$/.firebase/hosting.YnVpbGQ.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/about/about.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/about/about.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/detail.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/main.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/main.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/model.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/stories.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/stories.png" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -332,7 +333,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573257268774</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="Added storybook&#10;Added default stories for filters, game card, games list, new game form and header&#10;Header story is not working due to firebase api">
+      <created>1573311759113</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1573311759113</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -352,7 +360,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added url validation package&#10;Added popover with information in case url was invalid" />
     <MESSAGE value="Added counter of different types of game codes in the header" />
     <MESSAGE value="Added labels to new game form" />
     <MESSAGE value="Added labels to new game form&#10;Removed unnecessary import" />
@@ -377,6 +384,7 @@
     <MESSAGE value="Small fix in render condition" />
     <MESSAGE value="Added labels to card when in editing mode" />
     <MESSAGE value="Added removing and update functionality through firebase db" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added removing and update functionality through firebase db" />
+    <MESSAGE value="Added storybook&#10;Added default stories for filters, game card, games list, new game form and header&#10;Header story is not working due to firebase api" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added storybook&#10;Added default stories for filters, game card, games list, new game form and header&#10;Header story is not working due to firebase api" />
   </component>
 </project>
