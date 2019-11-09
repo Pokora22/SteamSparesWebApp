@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a53f3d0a-5f89-4c13-985f-cd903fd548ba" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/components/firebase/firebase.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/firebase/firebase.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/datastore/stubAPI.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/datastore/stubAPI.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.firebase/hosting.YnVpbGQ.cache" beforeDir="false" afterPath="$PROJECT_DIR$/.firebase/hosting.YnVpbGQ.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/about/about.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/about/about.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -40,7 +43,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/stories" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
@@ -48,11 +51,14 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\pokor\WebstormProjects\steam-spares-online\src\stories" />
       <recent name="C:\Users\pokor\WebstormProjects\steam-spares-online\src\components" />
       <recent name="C:\Users\pokor\WebstormProjects\steam-spares-online\src\components\filterControls" />
       <recent name="C:\Users\pokor\WebstormProjects\steam-spares-online\src\components\header" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\pokor\WebstormProjects\steam-spares-online\src\stories" />
+      <recent name="C:\Users\pokor\WebstormProjects\steam-spares-online\src\components\about" />
       <recent name="C:\Users\pokor\WebstormProjects\steam-spares-online\src\components" />
       <recent name="C:\Users\pokor\WebstormProjects\steam-spares-online\src" />
     </key>
@@ -319,7 +325,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573256757431</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Added removing and update functionality through firebase db">
+      <created>1573257268774</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1573257268774</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -339,7 +352,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Removed leftover unused props" />
     <MESSAGE value="Added url validation package&#10;Added popover with information in case url was invalid" />
     <MESSAGE value="Added counter of different types of game codes in the header" />
     <MESSAGE value="Added labels to new game form" />
@@ -364,6 +376,7 @@
     <MESSAGE value="Added JSON parsing to retrieve games from Firebase db&#10;Changed date temporarily to a string, need to revert for JSON" />
     <MESSAGE value="Small fix in render condition" />
     <MESSAGE value="Added labels to card when in editing mode" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added labels to card when in editing mode" />
+    <MESSAGE value="Added removing and update functionality through firebase db" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added removing and update functionality through firebase db" />
   </component>
 </project>
