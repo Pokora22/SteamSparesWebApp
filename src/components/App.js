@@ -70,9 +70,7 @@ class App extends Component{
 
     return (
       <div className="App">
-        <div className="row">
-          <Header gamesUnused={this.state.gameList.length - usedCount} gamesUsed={usedCount} gamesTotal={this.state.gameList.length}/>
-        </div>
+        <Header gamesUnused={this.state.gameList.length - usedCount} gamesUsed={usedCount} gamesTotal={this.state.gameList.length}/>
         <div className={"row"}>
           <FilterControls filter={this.handleFiltering}/>
         </div>

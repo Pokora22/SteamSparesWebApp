@@ -3,6 +3,7 @@ import App from './App';
 import About from './about/about'
 import Login from "./firebase/login";
 import Signup from "./firebase/signup";
+import CommentPage from "./commentList/commentPage"
 import { BrowserRouter, Route, Redirect, Switch } from "react-router-dom";
 import { withFirebase } from './firebase';
 import { withAuthentication } from './session/';
@@ -19,6 +20,7 @@ class Router extends Component{
                         (
                             <Fragment>
                                 <Switch>
+                                    <Route path="/comments" component={CommentPage}/>
                                     <Route path="/about" component={About}/>
                                     <Route exact path="/" component={withFirebase(App)}/>
                                     <Redirect from="*" to="/" />
@@ -29,6 +31,7 @@ class Router extends Component{
                         (
                             <Fragment>
                                 <Switch>
+                                    <Route path="/comments" component={CommentPage}/>
                                     <Route exact path="/login" component={withFirebase(Login)}/>
                                     <Route exact path="/signup" component={withFirebase(Signup)}/>
                                     {/*<Route exact path="/" component={App}/>*/}
