@@ -5,6 +5,7 @@ import CommentList from '../commentList/commentList'
 
 export default class Comment extends Component {
     render() {
+        console.log(this.props.comment);
         return (
             <div className="container">
                 <h2 className="text-center">{this.props.comment.title}</h2>
@@ -19,14 +20,9 @@ export default class Comment extends Component {
                             <div className="col-md-10">
                                 <p>
                                     <a className="float-left"
-                                       href="https://maniruzzaman-akash.blogspot.com/p/contact.html"><strong>{this.props.comment.author}
+                                       href="#"><strong>{this.props.comment.author}
                                        </strong>
                                     </a>
-                                    <span className="float-right"><i className="text-warning fa fa-star"></i></span>
-                                    <span className="float-right"><i className="text-warning fa fa-star"></i></span>
-                                    <span className="float-right"><i className="text-warning fa fa-star"></i></span>
-                                    <span className="float-right"><i className="text-warning fa fa-star"></i></span>
-
                                 </p>
                                 <div className="clearfix"></div>
                                 <p>{this.props.comment.content}</p>
@@ -38,7 +34,7 @@ export default class Comment extends Component {
                                 </p>
                             </div>
                         </div>
-                        {/*<CommentList comments={this.props.comment.comments} />*/}
+                        <CommentList comments={this.props.comment.comments} />
                     </div>
                 </div>
             </div>
