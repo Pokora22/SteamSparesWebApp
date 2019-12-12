@@ -1,6 +1,7 @@
 {
   "name": "steam-spares-online",
   "version": "0.1.0",
+  "proxy": "http://localhost:8888",
   "private": true,
   "dependencies": {
     "bootstrap": "^4.3.1",

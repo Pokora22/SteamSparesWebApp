@@ -6,6 +6,7 @@ import NewCommentForm from "../newCommentForm/newCommentForm";
 import * as api from '../../datastore/linkAPI';
 import Comment from "../comment/comment";
 import Header from "../header/header";
+import CommentList from "../commentList/commentList";
 
 // class Form extends React.Component {
 //     state = { comment: '', author: ''};
@@ -67,17 +68,6 @@ import Header from "../header/header";
 //     }
 // }
 
-const CommentPage = ({comments} )  => {
-    let items = comments.map(
-        (comment) =>  <Comment key={comment._id} comment={comment}/>
-    );
-    return (
-        <div>
-            {items}
-        </div>
-    );
-};
-
 class CommentView extends React.Component {
     state = {
         comments: []
@@ -89,14 +79,12 @@ class CommentView extends React.Component {
 
     render() {
         let allComments = api.getAllComments().then(resp =>{
-            console.log(resp);
-            if(resp.data) {
-                this.setState({comments: comments})
-            }
+            console.log(resp)
+            this.setState({comments: resp})
         });
 
         let comments = this.state.comments.map( (comment) => <Comment key={comment._id} comment={comment}/> );
-        comments = _.sortBy(comments, (comment) => -comment.updated);
+        comments = _.sortBy(comments, (comment) => comment.updated);
 
         return (
             <div className="container">
@@ -104,7 +92,7 @@ class CommentView extends React.Component {
                 <div className="row">
                     <div className="col-md-9 col-md-offset-1">
                         <h1>Comment Section</h1>
-                        <span>{comments}</span>
+                        <CommentList comments={this.state.comments} />
                         <NewCommentForm commentHandler={this.addComment} />
                     </div>
                 </div>
