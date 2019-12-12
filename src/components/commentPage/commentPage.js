@@ -77,14 +77,15 @@ class CommentView extends React.Component {
         this.setState({});
     };
 
+    componentDidMount() {
+    }
+
     render() {
         let allComments = api.getAllComments().then(resp =>{
-            console.log(resp)
-            this.setState({comments: resp})
+            let comments = resp;
+            comments = _.sortBy(comments, (comment) => comment.updated);
+            this.setState({comments: comments})
         });
-
-        let comments = this.state.comments.map( (comment) => <Comment key={comment._id} comment={comment}/> );
-        comments = _.sortBy(comments, (comment) => comment.updated);
 
         return (
             <div className="container">

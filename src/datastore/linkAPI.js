@@ -12,7 +12,6 @@ export const getComment = async (id) =>{
 }
 
 export const getAllComments = async() => {
-    console.log("trying to get all comments")
     const resp = await axios.get('/api/comments');
     return resp.data;
 };

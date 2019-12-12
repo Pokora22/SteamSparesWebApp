@@ -7,7 +7,7 @@ export default class Comment extends Component {
     render() {
         return (
             <div className="container">
-                <h2 className="text-center">Bootstrap 4 User Rating Form / Comment Form</h2>
+                <h2 className="text-center">{this.props.comment.title}</h2>
                 <div className="card">
                     <div className="card-body">
                         <div className="row">
