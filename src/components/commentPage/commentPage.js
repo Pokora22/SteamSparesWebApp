@@ -77,6 +77,16 @@ class CommentView extends React.Component {
         this.setState({});
     };
 
+    deleteComment = (id) => {
+        console.log('running delete in page for: ' + id)
+        api.deleteComment(id).then(
+            res => {
+                console.log("delete response: " + res);
+            }
+        );
+        this.setState({});
+    };
+
     componentDidMount() {
     }
 
@@ -93,7 +103,7 @@ class CommentView extends React.Component {
                 <div className="row">
                     <div className="col-md-9 col-md-offset-1">
                         <h1>Comment Section</h1>
-                        <CommentList comments={this.state.comments} />
+                        <CommentList comments={this.state.comments} deleteHandler={this.deleteComment}/>
                         <NewCommentForm commentHandler={this.addComment} />
                     </div>
                 </div>

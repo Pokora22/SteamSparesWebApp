@@ -4,8 +4,13 @@ import * as api from '../../datastore/linkAPI';
 import CommentList from '../commentList/commentList'
 
 export default class Comment extends Component {
+    handleDelete = (e) => {
+        console.log('running delete in comment')
+        e.preventDefault();
+        this.props.deleteHandler(this.props.comment._id);
+    }
+
     render() {
-        console.log(this.props.comment);
         return (
             <div className="container">
                 <h2 className="text-center">{this.props.comment.title}</h2>
@@ -27,10 +32,8 @@ export default class Comment extends Component {
                                 <div className="clearfix"></div>
                                 <p>{this.props.comment.content}</p>
                                 <p>
-                                    <a className="float-right btn btn-outline-primary ml-2"> <i
-                                        className="fa fa-reply"></i> Reply</a>
-                                    <a className="float-right btn text-white btn-danger"> <i
-                                        className="fa fa-heart"></i> Like</a>
+                                    <button className="float-right btn btn-outline-primary ml-2">Reply</button>
+                                    <button className="float-right btn text-white btn-danger" onClick={this.handleDelete}>Delete</button>
                                 </p>
                             </div>
                         </div>
