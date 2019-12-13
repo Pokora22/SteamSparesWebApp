@@ -10,6 +10,11 @@ export default class Comment extends Component {
         this.props.deleteHandler(this.props.comment._id);
     }
 
+    handleReply = (e) => {
+        e.preventDefault();
+        this.props.replyHandler(this.props.comment._id);
+    }
+
     render() {
         return (
             <div className="container">
@@ -32,7 +37,7 @@ export default class Comment extends Component {
                                 <div className="clearfix"></div>
                                 <p>{this.props.comment.content}</p>
                                 <p>
-                                    <button className="float-right btn btn-outline-primary ml-2">Reply</button>
+                                    <button className="float-right btn btn-outline-primary ml-2" onClick={this.handleReply}>Reply</button>
                                     <button className="float-right btn text-white btn-danger" onClick={this.handleDelete}>Delete</button>
                                 </p>
                             </div>

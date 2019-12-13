@@ -17,7 +17,13 @@ export const getAllComments = async() => {
 };
 
 export const updateComment = async (id, title, content) =>{
-    const resp = await axios.put(`/api/comments/${id}`, {title: title, content: content})
+    const resp = await axios.put(`/api/comments/${id}`, {title: title, content: content});
+    return resp.data;
+}
+
+export const replyToComment = async (id, author, content) => {
+    console.log()
+    const resp = await axios.put(`/api/comments/${id}/r`, {author: author, content: content});
     return resp.data;
 }
 

@@ -87,6 +87,11 @@ class CommentView extends React.Component {
         this.setState({});
     };
 
+    addReply = (id) => {
+        api.replyToComment(id, "author", "A reply");
+        this.setState({});
+    }
+
     componentDidMount() {
     }
 
@@ -103,7 +108,7 @@ class CommentView extends React.Component {
                 <div className="row">
                     <div className="col-md-9 col-md-offset-1">
                         <h1>Comment Section</h1>
-                        <CommentList comments={this.state.comments} deleteHandler={this.deleteComment}/>
+                        <CommentList comments={this.state.comments} deleteHandler={this.deleteComment} replyHandler={this.addReply}/>
                         <NewCommentForm commentHandler={this.addComment} />
                     </div>
                 </div>
