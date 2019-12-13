@@ -5,7 +5,6 @@ import CommentList from '../commentList/commentList'
 
 export default class Comment extends Component {
     handleDelete = (e) => {
-        console.log('running delete in comment')
         e.preventDefault();
         this.props.deleteHandler(this.props.comment._id);
     }
@@ -13,6 +12,13 @@ export default class Comment extends Component {
     handleReply = (e) => {
         e.preventDefault();
         this.props.replyHandler(this.props.comment._id);
+    }
+
+    handleEdit = (e) => {
+        e.preventDefault();
+        this.props.editHandler(this.props.comment._id,
+            "EDITED COMMENT",
+            "This would normally come from a text area popup or something similar. Sorry");
     }
 
     render() {
@@ -38,11 +44,12 @@ export default class Comment extends Component {
                                 <p>{this.props.comment.content}</p>
                                 <p>
                                     <button className="float-right btn btn-outline-primary ml-2" onClick={this.handleReply}>Reply</button>
-                                    <button className="float-right btn text-white btn-danger" onClick={this.handleDelete}>Delete</button>
+                                    <button className="float-right btn text-white btn-danger ml-2" onClick={this.handleDelete}>Delete</button>
+                                    <button className="float-right btn text-white btn-warning" onClick={this.handleEdit}>Edit</button>
                                 </p>
                             </div>
                         </div>
-                        <CommentList comments={this.props.comment.comments} />
+                        <CommentList comments={this.props.comment.comments} deleteHandler={this.props.deleteHandler} replyHandler={this.props.replyHandler} editHandler={this.props.editHandler}/>
                     </div>
                 </div>
             </div>

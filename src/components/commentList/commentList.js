@@ -7,7 +7,7 @@ import Comment from "../comment/comment";
 export default class CommentList extends React.Component {
 
     render() {
-        let items = this.props.comments.map((comment) => <Comment key={comment._id} comment={comment} deleteHandler={this.props.deleteHandler} replyHandler={this.props.replyHandler}/>);
+        let items = this.props.comments.map((comment) => <Comment key={comment._id} comment={comment} deleteHandler={this.props.deleteHandler} replyHandler={this.props.replyHandler} editHandler={this.props.editHandler}/>);
         return (
             <div>
                 {items}
